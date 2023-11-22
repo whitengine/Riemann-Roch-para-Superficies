@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  22 NOV 2023 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  22 NOV 2023 15:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1186,6 +1186,15 @@ cm/m/n/12 
  []
 
 [4] [5]
+Overfull \hbox (55.00044pt too wide) detected at line 898
+\FML/fncmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FMS/fncm/m/n/12 O[]\T1/fnc/m/n/12 (\FMS/
+fncm/m/n/12 ^^@\FML/fncmi/m/it/12 C\T1/fnc/m/n/12 )) \FMS/fncm/m/n/12  \FML/fn
+cmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FMS/fncm/m/n/12 O[]\T1/fnc/m/n/12 ) \FMS/fncm/m
+/n/12 € [] []  \FML/fncmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FMS/fncm/m/n/12 O[]\T1/f
+nc/m/n/12 ) \FMS/fncm/m/n/12 € [] [] \FML/fncmi/m/it/12 ;
+ []
+
+
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
 ra-Superficies/out/main.bbl
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
@@ -1227,7 +1236,7 @@ live/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></home/whitengine
 texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></home/whitengine/t
 exlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semes
-tre/Rieman-Roch-para-Superficies/out/main.pdf" (6 pages, 145045 bytes).
+tre/Rieman-Roch-para-Superficies/out/main.pdf" (6 pages, 145346 bytes).
 PDF statistics:
  179 PDF objects out of 1000 (max. 8388607)
  143 compressed objects within 2 object streams

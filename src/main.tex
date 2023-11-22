@@ -886,9 +886,17 @@ Primero, tenemos la sucesión exacta
 \]
 la cual utilizando la aditividad de la característica de Euler-Pincaré nos da
 \[
-    \chi (\O_C) = 1 - g(C) = \chi (\O_S) - \chi (\O_S (-C)).
+    \chi (\O_C) = \chi (\O_S) - \chi (\O_S (-C)).
 \]
-Finalmente, obtenemos la fórmula aplicando Riemann-Roch con $L = \O_S (C)$.
+Como $ \chi (\O_C ) := 1 - g(C)$, nos queda,
+\[
+    1 - g(C) = \chi (\O_S) - \chi (\O_S (-C)).
+\]
+Finalmente, obtenemos la fórmula aplicando Riemann-Roch con $L = \O_S (-C)$, pues nos dice que
+\[
+    \chi (\O_S (-C)) = \chi (\O_S) + \frac 1 2 \left ( (\O_S (-C), \O_S (-C)) - (\O_S (-C), \O_S (K_S))\right) = \chi (\O_S) + \frac 1 2 \left ( (\O _S (C), \O_S (C)) + (\O_S (C), \O_S (K_S)) \right ),
+\]
+con lo cual podemos reemplazar esto arriba y despejar $g(C)$.
 \end{proof}
 
 
