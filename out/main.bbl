@@ -5,6 +5,17 @@
   \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
 }
 \providecommand{\href}[2]{#2}
-\begin{thebibliography}{}
+\begin{thebibliography}{Mon23}
+
+\bibitem[Ati18]{atiyah2018introductionToCommutativeAlgebra}
+Michael Atiyah, \emph{Introduction to commutative algebra}, CRC Press, 2018.
+
+\bibitem[Bea96]{beauville1996complexAlgebraicSurfaces}
+Arnaud Beauville, \emph{Complex algebraic surfaces}, no.~34, Cambridge
+  University Press, 1996, Estas notas se basan en el Capítulo 1.
+
+\bibitem[Mon23]{notas_pedro}
+Pedro Montero, \emph{Notas de curvas algebraicas (mat426)},
+  \url{http://pmontero.mat.utfsm.cl/mat426_2023_2.html}, 2023.
 
 \end{thebibliography}

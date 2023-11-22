@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  22 NOV 2023 10:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  22 NOV 2023 15:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -940,8 +940,8 @@ File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 )
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
 ra-Superficies/out/main.aux
-LaTeX Info: Redefining \. on input line 22.
-LaTeX Info: Redefining \% on input line 22.
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
 )
 \openout1 = `main.aux'.
 
@@ -1153,51 +1153,84 @@ LaTeX Font Info:    Trying to load font information for T1+cmss on input line 6
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
-(/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
-ra-Superficies/out/main.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 10.
-
 ) [1{/home/whitengine/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 }{/home/whitengine/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/w
 hitengine/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
+(Font)              scaled to size 8.36993pt on input line 700.
+ [2]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 701
+.
+
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
+(Font)              scaled to size 8.36993pt on input line 736.
+LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
+(Font)              scaled to size 6.50995pt on input line 736.
+ [3]
+Overfull \hbox (6.18599pt too wide) in paragraph at lines 772--773
+[]\T1/fnc/m/n/12 Ahora, el Ìtem (a) y la adi-ti-vi-dad de la ca-rac-te-rÌs-ti-c
+a de Euler-PoincarÈ nos da $(\FMS/fncm/m/n/12 O[]\T1/fnc/m/n/12 (\FML/fncmi/m/i
+t/12 C\T1/fnc/m/n/12 )\FML/fncmi/m/it/12 ; \FMS/fncm/m/n/12 O[]\T1/fnc/m/n/12 (
+\FML/fncmi/m/it/12 C[]\T1/fnc/m/n/12 )) \FMS/fncm/m/n/12 Å
+ []
+
+
+Overfull \hbox (3.66212pt too wide) in paragraph at lines 772--773
+\T1/fnc/m/n/12 (\FML/fncmi/m/it/12 C; C[]\T1/fnc/m/n/12 )$, pues de-sa-rro-llan
+-do la de-fi-ni-ciÛn del la-do iz-quier-do, se pue-de ver que es igual a $\FML/
+fncmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FML/fncmi/m/it/12 O[]\T1/fnc/m/n/12 ) \FMS/fn
+cm/m/n/12 Å
+ []
+
+[4] [5]
+(/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
+ra-Superficies/out/main.bbl
+LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
+(Font)              scaled to size 9.29993pt on input line 11.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+9.
+
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)) [6]
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
 ra-Superficies/out/main.aux
-LaTeX Info: Redefining \. on input line 29.
-LaTeX Info: Redefining \% on input line 29.
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
 )
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: EF426AE949BD240839D1F12D2D0F2945;181
-(rerunfilecheck)             After:  BBCEC3C39262595F7FA4F3D7EB88E7EA;145.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 9039E3C67A5A9ED851A4341DC28D853D;285.
  ) 
 Here is how much of TeX's memory you used:
- 24756 strings out of 476017
- 463184 string characters out of 5786780
- 1861666 words of memory out of 5000000
- 44588 multiletter control sequences out of 15000+600000
- 568526 words of font info for 125 fonts, out of 8000000 for 9000
+ 25183 strings out of 476017
+ 472703 string characters out of 5786780
+ 1871666 words of memory out of 5000000
+ 44956 multiletter control sequences out of 15000+600000
+ 594985 words of font info for 168 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 116i,5n,118p,666b,381s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{section*.4} has been referenced but does not exist,
- replaced by a fixed one
-
-</home/whitengine/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1200.
-pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.p
-fb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pf
-b></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pf
-b>
+ 116i,20n,118p,781b,1256s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/whitengine/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/e
+ufm10.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/public/fourier/
+fourier-bb.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/public/fou
+rier/fourier-mcl.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/publ
+ic/fourier/fourier-mex.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type
+1/public/fourier/fourier-ml.pfb></home/whitengine/texlive/2023/texmf-dist/fonts
+/type1/public/fourier/fourier-mlit.pfb></home/whitengine/texlive/2023/texmf-dis
+t/fonts/type1/public/fourier/fourier-ms.pfb></home/whitengine/texlive/2023/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/whitengine/texlive
+/2023/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></home/whitengine/tex
+live/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></home/whitengine
+/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></home/whitengine/
+texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></home/whitengine/t
+exlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semes
-tre/Rieman-Roch-para-Superficies/out/main.pdf" (1 page, 52103 bytes).
+tre/Rieman-Roch-para-Superficies/out/main.pdf" (6 pages, 145045 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 179 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

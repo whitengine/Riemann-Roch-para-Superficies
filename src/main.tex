@@ -72,7 +72,7 @@
 \newcommand{\ie}{\textit{i.e. }}
 
 \newcommand{\Hilb}{\textup{Hilb}}
-\newcommand{\Pic}{\textup{Pic}}
+\newcommand{\Pic}[1]{\textup{Pic}{ \: (#1)}}
 \newcommand{\Alb}{\textup{Alb}}
 \newcommand{\Spec}{\textup{Spec}}
 \newcommand{\Proj}{\textup{Proj}}
@@ -624,23 +624,272 @@ Agradezco al profesor Pedro por sugerir este tema para la ayudantía, por compar
 
 \section{Notación}
 
+Todas las superficies, que notaremos $S,S'$, serán superficies suaves proyectivas sobre un cuerpo algebraicamente cerrado $k$. Notaremos por $D,D'$ a dos divisores de $S$; $D\sim D'$ significa que $D$ y $D'$ son linealmente equivalentes, ess decir, $D-D'$ es un divisor principal. $\O_S (D)$ denota al haz invertible correspondiente al divisor $D$, y $H^i (S, \O_S (D)) =: H^i (\O_S (D)) =: H^i (D)$ a su $i$-ésimo grupo de cohomologia respecto del haz $\O_S (D)$.
+
+Recordemos que si $X$ es una variedad algebraica proyectiva de dimensión $n$, y $\mathcal F$ es un haz coherente en $X$ (por ejemplo, en estas notas estaremos trabajando exactamente dentro de este contexto). Definimos la \textbf{característica de Euler-Poincaré} de $\mathcal F$ como la cantidad finita (gracias a los teoremas de finitud y anulación de Grothendieck; ver \cite[\S 5]{notas_pedro}):
+\[
+    \chi (\mathcal F) := \chi (X, \mathcal F) := \sum_{i \geq 0} (-1)^i h^i(X, \mathcal F)  = \sum_{i =0}^n (-1)^i h^i(X, \mathcal F),
+\]
+donde $h^i (X, \mathcal F) := h^i (\mathcal F) := \dim_k (H^i (X, \mathcal F))$. Por ejemplo, cuando $\mathcal F = \O_X (D)$ es el haz asociado a un divisor $D$ de $X$, notaremos $h^i (X, F) =: h^i (D)$; es costumbre notar $\ell (D)$ a la dimensión del \textbf{espacio de Riemann-Roch} de $D$, es decir, del espacio $H^0 (X, \O_X (D))$. Recordar que en este contexto (ver \cite[Lema 5.2.5]{notas_pedro}) la característica de Euler-Poincaré es \textbf{aditiva}, es decir, dada una sucesión exacta de haces coherentes en $X$ (variedad proyectiva)
+\[
+    \begin{tikzcd}
+    0 \ar{r} & \mathcal F \ar{r} & \mathcal G \ar{r} & \mathcal H \ar{r} & 0
+    \end{tikzcd}
+\]
+entonces
+\[
+    \chi (\mathcal G) = \chi (\mathcal F) + \chi (\mathcal H).
+\]
+
+Si $X$ es una variedad algebraica, se define el \textbf{grupo de Picard} de $X$, como el grupo abeliano
+\[
+    \Pic X := \left \{\text{fibrados en recta en $X$}\right \}\Big/\cong,
+\]
+con la estructura de grupo dada por el producto tensorial de fibrados $L \otimes L$ y con inversa de un elemento $L$ dada por su fibrado dual $L^\vee$.
+
+Cuando $X$ es una variedad algebraica suave e irreducible, se define el \textbf{fibrado en rectas canónico} $\omega_X$ de $X$ como
+\[
+    \omega_X := \det (\Omega_X^1),
+\]
+donde $\Omega_X^1$ es el \textit{fibrado cotangente} de $X$. Un \textbf{divisor canónico} $K_X$ es cualquier divisor tal que
+\[
+    \omega_X \cong \O_X (K_X) \quad \text{en $\Pic X$}.
+\]
+Similarmente, su fibrado dual $\omega_X^\vee \cong \O_X (-K_X)$ es llamado el \textbf{fibrado en rectas anticanónico}, y $-K_X$ un \textbf{divisor anti-canónico}.
 
 
-\section{Introducción}
+Cuando $X$ sea una variedad algebraica irreducible suave, tenemos un ``diccionario'' entre fibrados en rectas, divisores de Weil, y divisores de Cartier; el cual utilizaremos libremente (cf. \cite[\S 3]{notas_pedro}):
+\[
+    \begin{tikzcd}
+    \Pic X \ar[leftrightarrow]{rrrrrr}{L \mapsto \mathcal L, \text{ con $\mathcal L (U) := H^0 (U, \rest L U)$}} &&&&&& \{\text{haces invertibles}\}/\cong \\
+    \\
+    \\
+    \operatorname{Div} (X) /\operatorname{PDIV} (X) \ar[leftrightarrow]{uuu}{[D] \mapsto \O_X (D)} \ar[leftrightarrow]{rrrrrr}{D = [(f_i, U_i)] \mapsto \hat D = \sum_Y \nu_Y (f_i) Y} &&&&&& \operatorname{WDiv} (X) /\operatorname{PWDiv} (X)
+    \end{tikzcd}
+\]
+
+\section{Riemann-Roch para curvas}
 
 
-De por sí los grupos lineales clásicos como $\operatorname{GL}_n (k)$, $T_n (k)$, $U_n (k)$, $D_n (k)$, etc, son ubicuos en la matemática, pues aparecen en el contexto de representaciones, herramienta que nos permite entender objetos mucho más complicados. No es diferente el caso de la geometría algebraica, donde nos interesa estudiar variedades algebraicas como por ejemplo variedades proyectivas como el espacio proyectivo, las grassmannianas, y más generalmente, las variedades bandera: es aquí donde actúa naturalmente el grupo general lineal $\operatorname{GL} (V)$ para algún espacio vectorial de dimensión finita $V$.
+En \cite[\S 5]{notas_pedro} vimos el Teorema de Riemann-Roch para curvas $X = C$ (Teorema 5.2.8):
+\begin{quote}[Riemann-Roch para curvas]
+Sea $X = C$ una curva algebraica proyectiva irreducible, de género $g(C) := h^0 (C, \omega_C) = h^1 (C, \O_C)$. Entonces para todo $L \cong \O_C (D) \in \Pic C$, se tiene que
+\[
+    \chi (C, \O_C (D) ) = \chi (C, \O_C)  + \deg (D).
+\]
+Equivalentemente,
+\[
+    h^0 (C, \O_C (D)) - h^0 (C, \O_C (K_C - D)) = \deg (D) + 1 - g(C).
+\]
+\end{quote}
 
-Estos grupos lineales clásicos tiene estructura de variedad algebraica y no solo de grupos, además, estas estructuras son mutuamente compatibles, lo cual nos permite estudiarlas mediante el lenguaje de la geometría algebraica. Más generalmente, podemos definir qué es un grupo algebraico: simplemente es una generalización de este hecho.
+Informalmente, el Teorema de Riemann-Roch dice que para el caso de una variedad proyectiva irreducible $X$ que sea una curva, podemos escribir la característica de Euler-Poincaré de un dividor $D$ en función de invariantes geométricos de $X$ y una cantidad que se define geométricamente en función de $D$ (en el caso $X =C$ su grado). El propósito de estas notas es probar un enunciado similar para $X = S$ una superficie proyectiva suave irreducible.
 
-Así, es natural querer estudiar la estructura de los grupos algebraicos. Es por eso que el propósito de este artículo es estudiar grupos algebraicos y su estructura. Más precisamente, varias consecuencias importantes se desprenderán del teorema principal de este artículo:
 
-\begin{theorem}[Teorema del punto fijo de Borel]
-Sea $G$ un grupo algebraico conexo soluble, y sea $X$ una variedad completa (no vacía) donde actúa $G$. Entonces $G$ tiene un punto fijo en $X$.
+\section{Número de intersección}
+
+\begin{definition}
+Sean $C$ y $C'$ dos curvas irreducibles distintas en una superficie $S$, y $x \in C \cap C'$, notemos por $\O_x := \O_{S,x}$ al anillo local de $S$ en $x$. En $\O_x$, notemos por $f$ a la ecuación que define $C$, y similarmente $g$ a la que define $C'$. Luego definimos la \textbf{multiplicidad de intersección} de $C$ y $C'$ en $x$ como la cantidad
+\[
+    m_x (C \cap C') := \dim_{k} \O_x / (f,g).
+\]
+\end{definition}
+
+\begin{obs}
+A priori podría suceder que la dimensión de $\O_x/(f,g)$ como $k$-espacio vectorial sea infinito, sin embargo, como $C$ y $C'$ son curvas distintas, resulta que $\dim_k \O_x /(f,g)$ es finito, ya que podemos aplicar el siguiente resultado (cf. \cite[Corolario 11.8]{atiyah2018introductionToCommutativeAlgebra})
+\begin{quote}
+Sea $k$ un cuerpo algebraicamente cerrado y $B$ un dominio íntegro el cual es una $k$-álgebra finitamente generada. Entonces para todo ideal primo $\mathfrak p$ de $B$,
+\[
+    \operatorname{Height} (\mathfrak p) + \dim_{\text{Krull}} (B / \mathfrak p) = \dim_{\text{Krull}} (B).
+\]
+\end{quote}
+\end{obs}
+
+\begin{example}
+Cuando $m_x ( C \cap C') = 1$, geométricamente lo que está pasando es que $C$ y $C'$ son \textbf{transversales} en $x$, i.e., $f$ y $g$ forman un sistema local de coordenadas en un entorno abierto de $x$ (por ejemplo, si las tangentes de $C$ y $C'$ en $x$ son distintas). En efecto, notar que $m_x (C \cap C') = 1$ si y solo si $f$ y $g$ generan el ideal maximal $\mathfrak m_x \subset \O_x$. Claramente si $(f,g) = \mathfrak m_x$ se tiene que $\O_x / (f,g) = \O_x / \mathfrak m_x$ es un cuerpo pues estamos cocientando por un ideal maximal. Recíprocamente, si $\O_x /(f,g)$ tiene dimensión $1$, es un cuerpo, y por lo tanto $(f,g)$ es un ideal maximal de $\O_x$; como $(f,g) \subset \mathfrak m_x$ se sigue que de hecho vale la igualdad.
+\end{example}
+
+
+
+
+\begin{definition}
+Sean $C$ y $C'$ dos curvas irreducibles distintas en $S$, definimos el \textbf{número de intersección}:
+\[
+    (C,C') := \sum_{x \in C \cap C'} m_x (C \cap C').
+\]
+\end{definition}
+
+\begin{obs}
+Nuevamente, podría suceder que la cantidad de la derecha sea infinita, pero ya vimos que cada término es finito, y más aún, notemos que la sumatoria tiene una cantidad finita de términos pues al ser $C$ y $C'$ curvas irreducibles distintas, no se pueden intersecar en más de finitos puntos: $C\cap C'$ es un cerrado de $C$ que no tiene muchas posibilidades, puede tener dimensión $1$ o $0$, y el primer caso no sucede pues $C \neq C'$.
+\end{obs}
+
+Recordemos que $C$ y $C'$ se pueden pensar como haces invertibles $\O_S (-C)$ y $\O_S (-C')$ respectivamente, luego definimos el haz
+\[
+    \O_{C \cap C'} := \O_S / \left ( \O_S (-C) \oplus \O_S (-C') \right).
+\]
+Resulta que este haz es un \textit{haz rascacielos}, concentrado en el conjunto finito $C \cap C'$; en cada uno de estos puntos $x$, tenemos que $(\O_{C \cap C'})_x = \O_x / (f,g)$. Por lo tanto
+\[
+    (C,C') = h^0 (S, \O_{C\cap C'}).
+\]
+
+\begin{theorem}\label{th:teorema 1}
+Para $L$ y $L'$ dos fibrados en rectas de $\Pic S$, definimos
+\[
+    (L, L') := \chi (\O_S) - \chi (L^\vee) - \chi (L'^{\vee}) + \chi (L^\vee \otimes L'^{\vee}).
+\]
+Entonces se tiene que $(\cdot, \cdot) : \Pic S \times \Pic S \to \reals$ es una forma simétrice bilineal en el grupo abeliano $\Pic S$, de tal suerte que si $C$ y $C'$ son dos curvas irreducibles distintas en $S$, se tiene que
+\[
+    (\O_S (C), \O_ S (C')) = (C,C').
+\]
 \end{theorem}
 
+En otras palabras, el invariante geométrico número de intersección se puede traducir a un invariante cohomológico pensando a las curvas como haces invertibles.
+
+La demostración detallada del teorema se encuentra en \cite{beauville1996complexAlgebraicSurfaces}. Daré solamente un bosquejo.
+\begin{proof}[Sketch de la demostración]
 
 
+\begin{lemma}
+\begin{enumerate}[(a)]
+\item Sean $s \in H^0 (S, \O_S (C))$ y $s' \in H^0 (S, \O_S(C'))$ secciones no nulas que se anulan en $C$ y $C'$ respectivamente. Entonces la sucesión
+\[
+    \begin{tikzcd}
+    0 \ar{r} & \O_S (-C - C') \ar{r}{(s',-s)} & \O_S (-C) \oplus \O_S (-C') \ar{r}{(s, s')} & \O_S \ar{r} & \O_{C \cap C'} \ar{r} & 0
+    \end{tikzcd}
+\]
+es exacta.
+\item Sea $C$ una curva suave irreducible en $S$. Para todo $L \in \Pic S$, se tiene que
+\[
+    (\O_S (C), L) = \deg (\rest L C)
+\]
+\item Sea $D$ un divisor en $S$, y $H$ una sección por unhiperplano de $S$, entonces existe $n \geq 0$ tal que $D + n H$ es una sección por un hiperplano. En particular, podemos escribir $D \sim A- B$, donde $A$ y $B$ son curvas suaves de $S$ con $A \sim D + n H$ y $B \sim n H$.
+\end{enumerate}
+\end{lemma}
+(El ítem (c) fue visto en clase).
+
+\bigskip
+
+Ahora, el ítem (a) y la aditividad de la característica de Euler-Poincaré nos da $(\O_S (C), \O_S (C')) = (C, C')$, pues desarrollando la definición del lado izquierdo, se puede ver que es igual a $\chi (O_{C \cap C'}) = h^0 (C \cap C') = (C, C')$. Luego para probar el teorema basta probar la bilinearidad (que la forma es simétrica es obvio). Si $L$ y $L'$ son dos haces invertibles. Por el ítem (c), podemos escribir $L' = \O_S (A - B)$, donde $A$ y $B$ son dos curvas suaves en $S$. Consideremos la expresión
+\[
+    s(L_1, L_2,L_3) := (L_1, L_2 \otimes L_3) - (L_1, L_2) - (L_1, L_3);
+\]
+claramente la expresión es simétrica en las tres variables, y el ítem (b) implica que si $L_1 = \O_S (C)$ para una curva irreducible suave $C$ de $S$, entonces $s(L_1,L_2, L_3) = 0$; similarmente si $L_2$ o $L_3$ lo es. Tomando $L_1 = L$, $L_2 = L'$ y $L_3 = \O_S (B)$, despejamos,
+\[
+    (L, L') = (L, \O_S (A)) - (L, \O_S (B)).
+\]
+Así, el ítem (b) prueba que $(L, L')$ es lineal en $L$. La simetría implica que es lineal en la segunda coordenada también.
+\end{proof}
+En otras palabras, que $( \cdot, \cdot)$ sea bilineal en $\Pic S$, implica que:
+\begin{enumerate}[(i)]
+\item $ (L \otimes L', L'' ) = (L , L'') + (L', L'')$.
+\item $ (L^\vee, L') = - (L, L')$ y $(\O_S, L) = 0$.
+\end{enumerate}
+(En la primera coordenada. Similarmente, en la segunda valen estas identidades).
+
+\begin{remark}
+Dados dos divisores en $S$, digamos $D$ y $D'$, la gracia del teorema es que podemos calcular el producto $(\O_S (D), \O_S (D'))$ reemplazando $D$ y $D'$ por divisores linealmente equivalentes (pues su representante en $\Pic S$ no cambia!).
+\end{remark}
+Esto tiene dos implicancias:
+
+\begin{proposition}
+\begin{enumerate}[(1)]
+\item Sea $C$ una curva suave, $f : S \to C$ un morfismo sobreyectivo, $F$ una fibra de $f$. Entonces $(\O_S (F), \O_S (F)) = 0$.
+\item Si $S'$ es una superficie y $g : S \to S'$ es un morfismo genéricamente finito de grado $d$, entonces
+\[
+    (\O_S (g^* D), \O_S (g^* D')) = d ( \O_S (D), \O_S (D')).
+\]
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+\begin{enumerate}[(1)]
+\item Escribamos $F = f^* \{x\}$ para algún $C$. Existe un divisor $A$ en $C$ linealmente equivalente a $x$ tal que $x \not \in A$, con lo cual $F \sim f^* A$. Como $f^* A$ es una combinación lineal de fibras de $f$ distintas de $F$, tenemos que
+\[
+    (\O_S (F), \O_S (F)) = (\O_S (F), f^* A) = 0.
+\]
+\item Por el ítem (c), basta probar la fórmula para el caso en el que $D$ y $D'$ son secciones de hiperplanos de $S$. Existe un abierto $U$ de $S'$ tal que las fibras de $g$ tienen grado $d$. Entonces podemos mover $D$ y $D'$ de tal manera que se intersecten transversalmente y la intersección caiga en $U$. Consecuentemente, $g^* D$ y $g^* D'$ se intersectan transversalmente y además $g^* D \cap g^* D' = g^{-1} (D \cap D')$, y se sigue el resultado.
+\end{enumerate}
+\end{proof}
+
+\begin{example}[Teorema de Bezout]
+Tomemos $S = \mathbb{P}^2$. Recordemos que $\Pic {\mathbb{P}^2} \cong \integers$: más precisamente, toda curva de grado $d$ es linealmente equivalente a $d L$ para una recta $L$. Así, sean $C$ y $C'$ dos curvas de grado $d$ y $d'$, y sean $L$ y $L'$ dos rectas distintas; como $C \sim d L$ y $C' \sim d' L'$, el Teorema \ref{th:teorema 1} implica el Teorema de Bezout:
+\[
+    (C, C') = (\O_S (C), \O_S (C')) = (d L, d L' ) = d d' (L, L') = d d'.
+\]
+\end{example}
+
+
+
+\section{Riemann-Roch para superficies}
+
+Recordemos Teorema de dualidad de Serre (cuya demostración vimos en \cite[Teorema 5.1.3]{notas_pedro}):
+
+\begin{theorem}{Dualidad de Serre}\label{th:dualidad de serre}
+Sea $X$ una variedad algebraica proyectiva suave e irreducible de dimensión $n$, y sea $\omega_X = \det (\Omega_X^1)$. Entonces, para todo fibrado vectorial $E \to X$,
+\[
+    H^i (X, E) \cong H^{n-i} (X, E^\vee \otimes \omega_X)^{\vee}.
+\]
+En particular, $h^i (X, E) = h^i (X, E^\vee \otimes \omega_X)$.
+\end{theorem}
+En nuestro caso $X = S$, deducimos que $\chi (L) = \chi (\omega_S \otimes L^\vee)$ por la definición de número de Euler-Poincaré.
+
+Gracias a esto podemos probar el Teorema de Riemann-Roch para superficies:
+
+\begin{theorem}[Riemann-Roch para superficies]\label{th:riemann-roch para superficies}
+Para todo $L \in \Pic S$, se tiene
+\[
+    \chi (L) = \chi (\O_S) + \frac 1 2 \left ( (L, L) - (L, \omega_S) \right ).
+\]
+\end{theorem}
+\begin{proof}
+Primero calculemos por definición:
+\[
+    (L^\vee, L \otimes \omega_S^\vee) := \chi (\O_S) - \chi (L) - \chi (\omega_S \otimes L^\vee) + \chi (\omega_S).
+\]
+Por dualidad de Serre \ref{th:dualidad de serre}, $\chi (\omega_S) = \chi (\O_S)$ y $\chi (\omega_S \otimes L ^\vee) = \chi (L)$, y por lo tanto
+\[
+    (L^\vee, L \otimes \omega_S^\vee) = 2 \left ( \chi (\O_S) - \chi (L) \right).
+\]
+Por otro lado, aplicando bilinealidad (\ref{th:teorema 1}) del lado izquierdo:
+\begin{align*}
+(L^\vee, L \otimes \omega_S^\vee) &= (L^\vee, L) + (L^\vee, \omega_S^\vee)\\
+&= - (L , L) + (L, \omega_S).
+\end{align*}
+Juntando ambas igualdades obtenemos el teorema.
+\end{proof}
+
+
+\begin{remark}
+Podemos reescribir el enunacio de Riemann-Roch en término de divisores. Sea $h^i (D) := h^i(S, \O_S (D))$ y $K_S$ un divisor canónico, i.e., $\O_S (K_S) = \omega_S$. En este lenguaje la dualidad de Serre \ref{th:dualidad de serre} nos queda $h^i (D) = h^{n-i} (K_S - D)$ con $n = \dim (S) = 2$. Así, Riemann-Roch \ref{th:riemann-roch para superficies} queda:
+\[
+    h^0 (D) + h^0 (K-D) - h^1 (D) = \chi (\O_S) + \frac 1 2 \left ( (\O_S (D), \O_S (D) - (\O_S (D), \O_S (K_S))) \right ).
+\]
+
+Usualmente no tendremos información de $h^1 (D)$, aún así Riemann-roch nos provee de la siguiente desigualdad útil:
+\[
+    h^0 (D) + h^0 (K_S - D) \geq \chi (\O_S) + \frac 1 2 \left ( (\O_S (D), \O_S (D)) - ( \O_S (D), \O_S (K)) \right ).
+\]
+\end{remark}
+
+Sea $g(C) := h^1 (C, \O_C)$ el género de una curva $C$ suave irreducible en $S$, entonces podemos deducir la siguiente fórmula a partir de Riemann-Roch:
+\begin{theorem}[Fórmula del Género]\label{th:formula del genero}
+Sea $C$ una curva irreducible suave en $S$. Entonces
+\[
+    g(C) = 1 + \frac 1 2 \left ((\O_S (C), \O_S (C)) - (\O_S (C), \O_S (K_S)) \right ).
+\]
+\end{theorem}
+\begin{proof}
+Primero, tenemos la sucesión exacta
+\[
+    \begin{tikzcd}
+    0 \ar{r} & \O_S (-C) \ar{r} & \O_S \ar{r} & \O_C \ar{r} & 0,
+    \end{tikzcd}
+\]
+la cual utilizando la aditividad de la característica de Euler-Pincaré nos da
+\[
+    \chi (\O_C) = 1 - g(C) = \chi (\O_S) - \chi (\O_S (-C)).
+\]
+Finalmente, obtenemos la fórmula aplicando Riemann-Roch con $L = \O_S (C)$.
+\end{proof}
 
 
 

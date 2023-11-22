@@ -1,5 +1,7 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {subsection}{\tocsubsection {}{}{Agradecimientos}}{1}{section*.2}%
 \contentsline {section}{\tocsection {}{1}{Notación}}{1}{section.1}%
-\contentsline {section}{\tocsection {}{2}{Introducción}}{1}{section.2}%
-\contentsline {section}{\tocsection {}{}{Referencias}}{1}{section*.3}%
+\contentsline {section}{\tocsection {}{2}{Riemann-Roch para curvas}}{2}{section.2}%
+\contentsline {section}{\tocsection {}{3}{Número de intersección}}{2}{section.3}%
+\contentsline {section}{\tocsection {}{4}{Riemann-Roch para superficies}}{5}{section.4}%
+\contentsline {section}{\tocsection {}{}{Referencias}}{6}{section*.3}%
