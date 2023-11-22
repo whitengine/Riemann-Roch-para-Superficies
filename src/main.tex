@@ -1,0 +1,657 @@
+%\documentclass[english,10pt,draft]{amsart}
+%\documentclass[english,10pt]{amsart}
+
+\documentclass[spanish,12pt]{amsart}
+\usepackage{fouriernc}%la fuente
+%\usepackage[english]{babel}
+\usepackage[spanish]{babel}
+
+\relpenalty=9999
+\binoppenalty=9999
+%\mathsurround=1pt %espacio antes y después de una fórmula en el texto
+
+
+%\usepackage[matrix,arrow]{xy}
+%\xyoption{all}
+
+\usepackage{amscd,amssymb,amsfonts,amsmath}
+\usepackage{tikz-cd}
+
+\usepackage{bm}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\DeclareMathAlphabet{\mathscrbf}{OMS}{mdugm}{b}{n}
+
+\usepackage{epigraph}
+
+\usepackage{braket} %para definir \set , \Set y que los conjuntos se vean mas lindos
+
+\usepackage[shortlabels]{enumitem}
+
+\definecolor{violet}{rgb}{0.0,0.2,0.7}
+\definecolor{rouge2}{rgb}{0.8,0.0,0.2}
+\usepackage{hyperref}
+\hypersetup{
+    %bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={},    % title
+    pdfauthor={},     % author
+    colorlinks=true,       % false: boxed links; true: colored links
+   linkcolor=violet,          % color of internal links
+    citecolor=rouge2,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=cyan}           % color of external links
+
+
+%\renewcommand{\thepart}{\Roman{part}}
+\setcounter{tocdepth}{1} %tableofcontents
+
+\unitlength=1cm
+
+\usepackage[text={6.7in,9.2in},centering]{geometry}
+
+\makeatletter
+\renewcommand\subsection{\@startsection{subsection}{2}%
+  \z@{.5\linespacing\@plus.7\linespacing}{-.5em}%
+  %{\normalfont\scshape}}
+  %{\normalfont\itshape}}
+  {\normalfont\sffamily}}
+\makeatother
+
+%\renewcommand{\baselinestretch}{1.1}
+%\renewcommand{\baselinestretch}{1.2}
+
+
+\newcommand{\cqfd}{\hfill $\square$}
+\newcommand{\ie}{\textit{i.e. }}
+
+\newcommand{\Hilb}{\textup{Hilb}}
+\newcommand{\Pic}{\textup{Pic}}
+\newcommand{\Alb}{\textup{Alb}}
+\newcommand{\Spec}{\textup{Spec}}
+\newcommand{\Proj}{\textup{Proj}}
+\newcommand{\Supp}{\textup{Supp}}
+\newcommand{\Exc}{\textup{Exc}}
+\newcommand{\Rat}{\textup{RatCurves}}
+\newcommand{\RatCurves}{\textup{RatCurves}}
+\newcommand{\RC}{\textup{RatCurves}^n}
+\newcommand{\Univ}{\textup{Univ}}
+\newcommand{\Chow}{\textup{Chow}}
+\newcommand{\Sing}{\textup{Sing}}
+\newcommand{\CS}{\textup{CS}}
+\newcommand{\codim}{\textup{codim}}
+\newcommand{\Res}{\textup{Res}}
+\newcommand{\modulo}{\textup{mod}}
+
+
+
+
+%\let \cedilla =\c
+%\renewcommand{\c}[0]{{\mathbb C}}
+%\newcommand{\p}[0]{{\mathbb P}}
+
+
+\newcommand{\Nef}{\textup{Nef}}
+%\renewcommand{\Big}{\textup{Big}}
+\renewcommand{\div}{\textup{div}}
+\newcommand{\Div}{\textup{Div}}
+\newcommand{\Amp}{\textup{Amp}}
+\newcommand{\Pef}{\textup{Pef}}
+\newcommand{\Eff}{\textup{Eff}}
+\newcommand{\NS}{\textup{N}^1}
+\newcommand{\N}{\textup{N}}
+\newcommand{\Z}{\textup{Z}}
+\renewcommand{\H}{\textup{H}}
+\newcommand{\h}{\textup{h}}
+\newcommand{\discrep}{\textup{discrep}}
+
+\newcommand{\NE}{\overline{\textup{NE}}}
+\newcommand{\Hol}{\textup{Hol}}
+
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\map}{\dashrightarrow}
+\newcommand{\lra}{\longrightarrow}
+
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\Diff}{\textup{Diff}}
+\newcommand{\D}{\Delta}
+\renewcommand{\d}{\delta}
+\newcommand{\G}{\Gamma}
+\newcommand{\Fix}{\textup{Fix}}
+\newcommand{\Bs}{\textup{Bs}}
+\newcommand{\mult}{\textup{mult}}
+\newcommand{\Mob}{\textup{Mob}}
+\newcommand{\B}{\textup{B}}
+
+\newcommand{\bA}{\textbf{A}}
+\newcommand{\bB}{\textup{\textbf{A}}}
+\newcommand{\bC}{\textup{\textbf{C}}}
+\newcommand{\bD}{\textbf{D}}
+\newcommand{\bE}{\textbf{E}}
+\newcommand{\bF}{\textbf{F}}
+\newcommand{\bG}{\textbf{G}}
+\newcommand{\bH}{\textbf{H}}
+\newcommand{\bI}{\textbf{I}}
+\newcommand{\bJ}{\textbf{J}}
+\newcommand{\bK}{\textbf{K}}
+\newcommand{\bL}{\textbf{L}}
+\newcommand{\bM}{\textbf{M}}
+\newcommand{\bN}{\textbf{N}}
+\newcommand{\bO}{\textbf{O}}
+
+%\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bQ}{\mathbb{Q}}
+%\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bR}{\textup{\textbf{R}}}
+\newcommand{\bS}{\textbf{S}}
+\newcommand{\bT}{\textbf{T}}
+\newcommand{\bU}{\textbf{U}}
+\newcommand{\bV}{\textbf{V}}
+\newcommand{\bW}{\textbf{W}}
+\newcommand{\bX}{\textbf{X}}
+\newcommand{\bY}{\textbf{Y}}
+\newcommand{\bZ}{\textbf{Z}}
+\renewcommand{\bB}{\textbf{B}}
+\newcommand{\bP}{\textbf{P}}
+
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+\newcommand{\frA}{\mathfrak{A}}
+\newcommand{\frB}{\mathfrak{B}}
+\newcommand{\frC}{\mathfrak{C}}
+\newcommand{\frD}{\mathfrak{D}}
+\newcommand{\frE}{\mathfrak{E}}
+\newcommand{\frF}{\mathfrak{F}}
+\newcommand{\frG}{\mathfrak{G}}
+\newcommand{\frH}{\mathfrak{H}}
+\newcommand{\frI}{\mathfrak{I}}
+\newcommand{\frJ}{\mathfrak{J}}
+\newcommand{\frK}{\mathfrak{K}}
+\newcommand{\frL}{\mathfrak{L}}
+\newcommand{\frM}{\mathfrak{M}}
+\newcommand{\frN}{\mathfrak{N}}
+\newcommand{\frO}{\mathfrak{O}}
+\newcommand{\frP}{\mathfrak{P}}
+\newcommand{\frQ}{\mathfrak{Q}}
+\newcommand{\frR}{\mathfrak{R}}
+\newcommand{\frS}{\mathfrak{S}}
+\newcommand{\frT}{\mathfrak{T}}
+\newcommand{\frU}{\mathfrak{U}}
+\newcommand{\frV}{\mathfrak{V}}
+\newcommand{\frW}{\mathfrak{W}}
+\newcommand{\frX}{\mathfrak{X}}
+\newcommand{\frY}{\mathfrak{Y}}
+
+%\renewcommand{\frm}{\mathfrak{m}} % accolades dans xymatrix
+
+\newcommand{\frm}{\mathfrak{m}}
+\newcommand{\frf}{\mathfrak{f}}
+\newcommand{\frg}{\mathfrak{g}}
+\newcommand{\frt}{\mathfrak{t}}
+
+
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\sbfE}{\mathscrbf{E}}
+\newcommand{\sbfG}{\mathscrbf{G}}
+\newcommand{\sbfH}{\mathscrbf{H}}
+\newcommand{\sbfL}{\mathscrbf{L}}
+\newcommand{\sbfN}{\mathscrbf{N}}
+
+\newcommand{\art}{\textup{Art}}
+\newcommand{\ens}{\textup{Ens}}
+\newcommand{\sch}{\textup{Sch}}
+\newcommand{\Der}{\textup{Der}}
+
+
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem*{theorema}{Teorema A}
+\newtheorem*{theoremb}{Teorema B}
+\newtheorem*{theoremc}{Teorema C}
+\newtheorem*{theoremd}{Teorema D}
+\newtheorem*{theoreme}{Teorema E}
+\newtheorem{maintheorem}[theorem]{Teorema Principal}
+\newtheorem{question}[theorem]{Pregunta}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{corollaries}[theorem]{Corolarios}
+\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{criteria}[theorem]{Criterio}
+\newtheorem{conjecture}[theorem]{Conjectura}
+\newtheorem{principle}[theorem]{Principio}
+
+\newtheorem*{theorem*}{Teorema}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definición}
+\newtheorem{condition}[theorem]{Condición}
+\newtheorem{say}[theorem]{}
+\newtheorem{hint}[theorem]{Hint}
+\newtheorem{trick}[theorem]{Truco}
+\newtheorem{exercise}[theorem]{Ejercicio}
+\newtheorem{problem}[theorem]{Problema}
+\newtheorem{construction}[theorem]{Construcción}
+\newtheorem{algorithm}[theorem]{Algoritmo}
+\newtheorem{obs}[theorem]{Observación}
+\newtheorem{observations}[theorem]{Observaciones}
+%\renewcommand{\theremark}{}
+\newtheorem{note}[theorem]{Nota}            %\renewcommand{\thenote}{}
+\newtheorem{summary}[theorem]{Resumen}         %\renewcommand{\thesumm}{}
+\newtheorem{acknowledgement}{Agradecimientos}
+\newtheorem{notation}[theorem]{Notación}
+\newtheorem{atention}[theorem]{Atención}
+\newtheorem{definition-theorem}[theorem]{Definición-Teorema}
+\newtheorem{definition-lemma}[theorem]{Definición-Lema}
+\newtheorem{convention}[theorem]{Convención}
+\newtheorem{application}[theorem]{Aplicación}
+
+
+
+\theoremstyle{remark}
+\newtheorem*{claim}{Claim}
+%\newtheorem*{rem}{Remark}
+%\newtheorem*{rems}{Remarks}
+\newtheorem{case}{Caso}
+\newtheorem{subcase}{Subcaso}
+\newtheorem{step}{Paso}
+\newtheorem{approach}{Enfoque}
+%\newtheorem{principle}{Principle}
+\newtheorem{fact}[theorem]{Hecho}
+\newtheorem{subsay}{}
+\newtheorem*{notation-and-definition}{Notación y definición}
+\newtheorem{assumption}[theorem]{Hipótesis}
+\newtheorem{remark}[theorem]{Observación}
+\newtheorem{remarks}[theorem]{Observaciones}
+\newtheorem{example}[theorem]{Ejemplo}
+
+
+\numberwithin{equation}{section}
+
+\def\factor#1.#2.{\left. \raise 2pt\hbox{$#1$} \right/\hskip -2pt\raise -2pt\hbox{$#2$}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%Teoría de Grupos%%%%%%%%%%%%
+
+%Grupo simétrico de n elementos
+\newcommand{\SymGrp}[1]{\mathbb{S}_{#1}}
+%Grupo alternado de n elementos
+\newcommand{\AltGrp}[1]{\mathbb{A}_{#1}}
+
+%Orden de un elemento $a \in G$ de un grupo
+\newcommand{\ord}[1]{\operatorname{ord} (#1)}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%Polinomios%%%%%%%%%%%%%%%%%%%%
+
+
+%grado de una extensión algebraica
+\newcommand{\degExt}[2]{[#1:#2]}
+\newcommand{\degSep}[2]{[#1 : #2]_s}
+\newcommand{\degInsep}[2]{[#1:#2]_i}
+
+
+%espacio afin A^n
+\newcommand{\afine}[1]{\mathbb{A}^{#1}}
+%espacio proyectivo P^n
+\newcommand{\projective}[1]{\mathbb{P}^{#1}}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%grupos de matrices
+%SL
+\newcommand{\SL}[2]{\operatorname{SL}_{#1} ( #2)}
+%GL
+\newcommand{\GL}[2]{\operatorname{GL}_{#1} ( #2)}
+
+%matriz identidad
+\newcommand{\Id}{\operatorname{Id}}
+
+
+
+%enteros Z
+\newcommand{\integers}{\mathbb{Z}}
+%racionales
+\newcommand{\rationals}{\mathbb{Q}}
+%naturales
+\newcommand{\naturals}{\mathbb{N}}
+%reales R
+\newcommand{\reals}{\mathbb{R}}
+%imaginarios
+\newcommand{\complex}{\mathbb{C}}
+%p-adicos
+\newcommand{\padics}{\mathbb{Q}_p}
+%enteros p-adicos
+\newcommand{\padicintegers}{\mathbb{Z}_p}
+
+%cuerpos finitos
+%Fp
+\newcommand{\Fp}{\mathbb{F}_p}
+%Fq
+\newcommand{\Fq}{\mathbb{F}_q}
+
+
+
+%valor absoluto
+\newcommand{\abs}[1]{\left \vert #1 \right \vert}
+%valor absoluto con dos barras
+\newcommand{\Abs}[1]{\left \vert \left \vert #1 \right \vert \right \vert}
+
+%valuacion p-adica
+\newcommand{\val}[1]{\operatorname{val} (#1)}
+
+%Hom
+\newcommand{\Hom}[3]{\operatorname{Hom}_{#1} (#2, #3)}
+%Hom con caligrafia cursiva
+\newcommand{\HomCalli}[3]{\operatorname{\text{\calligra{Hom}}}_{\: \: \: #1} (#2, #3)}
+
+%imagen y núcleo
+\newcommand{\Imagen}{\operatorname{Im}}
+\newcommand{\Ker}{\operatorname{Ker}}
+
+%coker
+\newcommand{\Coker}{\operatorname{Coker}}
+
+%limite inverso
+\newcommand{\liminv}{\varprojlim}
+
+
+%un poco de typeset para categorias
+\newcommand{\catname}[1]{{\operatorfont\textbf{#1}}}
+
+%flecha de isomorfismo a derecha corto \isomrightarrow
+\newcommand{\isomrightarrow}{\overset{\sim}{\rightarrow}}
+%flecha de isomorfismo a derecha largo \isomrightarrow
+\newcommand{\isomlongrightarrow}{\overset{\sim}{\longrightarrow}}
+
+%flecha de isomorfismo a izquierda corto \isomleftarrow
+\newcommand{\isomleftarrow}{\overset{\sim}{\leftarrow}}
+%flecha de isomorfismo a izquierda largo \isomleftarrow
+\newcommand{\isomlongleftarrow}{\overset{\sim}{\longleftarrow}}
+
+
+\renewcommand{\hat}[1]{\widehat{#1}}
+\renewcommand{\bar}[1]{\overline{#1}}
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+
+%declaro un comando nuevo para escribir restricción de funciones
+\newcommand\rest[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+
+%%%%   COMANDO ALGEBRA CONMUTATIVA   %%%%
+
+%altura de un ideal:
+\newcommand{\height}{\textsc{height}}
+
+%Clausura topológica
+\newcommand{\closure}[1]{\overline{#1}}
+
+%longitud de un A-modulo. Notacion: \length_A M
+\newcommand{\length}{\operatorname{length}}
+
+%Anulador de un $A$-módulo.
+\newcommand{\Ann}[1]{\operatorname{Ann} (#1)}
+
+%Cuerpo de fracciones. Notacion $\FracField A$.
+\newcommand{\FracField}[1]{\operatorname{Fr} (#1)}
+
+
+%conjunto de Lugares de un cuerpo
+\newcommand{\places}[1]{\mathcal{Pl} (#1)}
+
+%volumen
+\newcommand{\Vol}[1]{\operatorname{vol}\left ( #1 \right)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%   COMANDO ANÁLISIS  %%%%
+
+%definimos el diferencial d de la integral "\int f(x) \dd x"
+\newcommand*\dd{\mathop{}\!\mathrm{d}}
+
+%definimos mas diferenciales
+\newcommand{\dmu}[1]{\dd \mu (#1)}
+\newcommand{\dnu}[1]{\dd \nu (#1)}
+\newcommand{\dtheta}[1]{\dd \theta (#1)}
+\newcommand{\dxi}[1]{\dd \xi (#1)}
+\newcommand{\deta}[1]{\dd \eta (#1)}
+
+
+
+
+
+
+%%%%   COMANDO TEORÍA DE NÚMEROS  %%%%
+
+%Morfismo de Frobenius
+\newcommand{\Frob}{\operatorname{Frob}}
+
+%Grupo de Galois
+\newcommand{\Gal}[2]{\operatorname{Gal} ( #1 / #2 )}
+
+%Discriminante
+\newcommand{\discriminant}[1]{\mathfrak{d} (#1 )}
+\newcommand{\disc}{\operatorname{d}}
+\newcommand{\Disc}[3]{\operatorname{D}_{#1 / #2} (#3)}
+
+%%%%Ideales primos%%%
+%escribe una letra en notación mathfrak, para denotar a un ideal o elemento primo.
+
+\newcommand{\primo}[1]{\mathfrak{#1}}
+\newcommand{\Primo}[1]{\mathfrak{\MakeUppercase{#1}}}
+
+%anillo de enteros O_K
+\renewcommand{\O}{\mathcal{O}}
+%anillo de enteros con subindice de cuerpo (input, por ejemplo $K$).
+\newcommand{\integralring}[1]{O_{#1}}
+
+%caracteristica de un cuerpo Char k
+\newcommand{\Char}[1]{\operatorname{Char} #1}
+
+%traza. Notación \trace = Tr
+\newcommand{\trace}{\operatorname{Tr}}
+
+%Traza de extensiones. Notación \Tr L K \alpha = \operatorname{Tr}_{L/K} (\alpha)
+\newcommand{\Tr}[1]{\operatorname{Tr}_{L/K} (#1)} %la extension es L/K por default
+\newcommand{\tr}[3]{\operatorname{Tr}_{#1/#2} (#3)}
+
+%Norma de extensiones. Notación \Norm L K \alpha = \operatorname{N}_{L/K} (\alpha)
+\newcommand{\Norm}[1]{\operatorname{N}_{L/K} (#1)}%la extension es L/K por default
+\newcommand{\norm}[3]{\operatorname{N}_{#1/#2} (#3)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%COMANDOS GEOMETRIA ALGEBRAICA
+
+%grupo de cohomología H^n (U,V)
+\renewcommand{\H}[3]{\operatorname{H}^{#1} (#2, #3)}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+\title{Riemann-Roch para superficies}
+
+\author{Enzo \textsc{Giannotta}}
+
+%\address{}
+
+%\email{}
+
+
+
+\begin{abstract}
+Presentaremos una introducción al número de intersección de dos curvas en una superficie y probaremos el Teorema de Riemann-Rocch para superficies.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+%{\small\tableofcontents}
+
+%\epigraph{I feel that what mathematics needs least are pundits who issue prescriptions or guidelines for presumably less enlightened mortals.}{\textit{Armand Borel}}
+
+
+
+
+%\subsection*{Estructura del artículo}
+
+
+
+%%% Opcional (generalmente se agradece a gente con la quien se discutió o preguntó)
+\subsection*{Agradecimientos}
+
+Agradezco al profesor Pedro por sugerir este tema para la ayudantía, por compartir su tiempo para conversar sobre este tema, y por hacer disponible el material bibliográfico necesario para prepararlo.
+
+
+\section{Notación}
+
+
+
+\section{Introducción}
+
+
+De por sí los grupos lineales clásicos como $\operatorname{GL}_n (k)$, $T_n (k)$, $U_n (k)$, $D_n (k)$, etc, son ubicuos en la matemática, pues aparecen en el contexto de representaciones, herramienta que nos permite entender objetos mucho más complicados. No es diferente el caso de la geometría algebraica, donde nos interesa estudiar variedades algebraicas como por ejemplo variedades proyectivas como el espacio proyectivo, las grassmannianas, y más generalmente, las variedades bandera: es aquí donde actúa naturalmente el grupo general lineal $\operatorname{GL} (V)$ para algún espacio vectorial de dimensión finita $V$.
+
+Estos grupos lineales clásicos tiene estructura de variedad algebraica y no solo de grupos, además, estas estructuras son mutuamente compatibles, lo cual nos permite estudiarlas mediante el lenguaje de la geometría algebraica. Más generalmente, podemos definir qué es un grupo algebraico: simplemente es una generalización de este hecho.
+
+Así, es natural querer estudiar la estructura de los grupos algebraicos. Es por eso que el propósito de este artículo es estudiar grupos algebraicos y su estructura. Más precisamente, varias consecuencias importantes se desprenderán del teorema principal de este artículo:
+
+\begin{theorem}[Teorema del punto fijo de Borel]
+Sea $G$ un grupo algebraico conexo soluble, y sea $X$ una variedad completa (no vacía) donde actúa $G$. Entonces $G$ tiene un punto fijo en $X$.
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+\bibliographystyle{amsalpha}
+\bibliography{main}
+
+
+
+\end{document}
