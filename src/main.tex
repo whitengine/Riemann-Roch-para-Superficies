@@ -624,7 +624,7 @@ Agradezco al profesor Pedro por sugerir este tema para la ayudantía, por compar
 
 \section{Notación}
 
-Todas las superficies, que notaremos $S,S'$, serán superficies suaves proyectivas sobre un cuerpo algebraicamente cerrado $k$. Notaremos por $D,D'$ a dos divisores de $S$; $D\sim D'$ significa que $D$ y $D'$ son linealmente equivalentes, ess decir, $D-D'$ es un divisor principal. $\O_S (D)$ denota al haz invertible correspondiente al divisor $D$, y $H^i (S, \O_S (D)) =: H^i (\O_S (D)) =: H^i (D)$ a su $i$-ésimo grupo de cohomologia respecto del haz $\O_S (D)$.
+Todas las superficies, que notaremos $S,S'$, serán superficies suaves proyectivas irreducibles sobre un cuerpo algebraicamente cerrado $k$. Notaremos por $D,D'$ a dos divisores de $S$; $D\sim D'$ significa que $D$ y $D'$ son linealmente equivalentes, ess decir, $D-D'$ es un divisor principal. $\O_S (D)$ denota al haz invertible correspondiente al divisor $D$, y $H^i (S, \O_S (D)) =: H^i (\O_S (D)) =: H^i (D)$ a su $i$-ésimo grupo de cohomologia respecto del haz $\O_S (D)$.
 
 Recordemos que si $X$ es una variedad algebraica proyectiva de dimensión $n$, y $\mathcal F$ es un haz coherente en $X$ (por ejemplo, en estas notas estaremos trabajando exactamente dentro de este contexto). Definimos la \textbf{característica de Euler-Poincaré} de $\mathcal F$ como la cantidad finita (gracias a los teoremas de finitud y anulación de Grothendieck; ver \cite[\S 5]{notas_pedro}):
 \[
@@ -643,9 +643,9 @@ entonces
 
 Si $X$ es una variedad algebraica, se define el \textbf{grupo de Picard} de $X$, como el grupo abeliano
 \[
-    \Pic X := \left \{\text{fibrados en recta en $X$}\right \}\Big/\cong,
+    \Pic X := \left \{\text{fibrados en recta en $X$}\right \}\big/\cong,
 \]
-con la estructura de grupo dada por el producto tensorial de fibrados $L \otimes L$ y con inversa de un elemento $L$ dada por su fibrado dual $L^\vee$.
+con la estructura de grupo dada por el producto tensorial de fibrados $L \otimes L'$ y con inversa de un elemento $L$ dada por su fibrado dual $L^\vee$.
 
 Cuando $X$ es una variedad algebraica suave e irreducible, se define el \textbf{fibrado en rectas canónico} $\omega_X$ de $X$ como
 \[
@@ -672,7 +672,8 @@ Cuando $X$ sea una variedad algebraica irreducible suave, tenemos un ``diccionar
 
 
 En \cite[\S 5]{notas_pedro} vimos el Teorema de Riemann-Roch para curvas $X = C$ (Teorema 5.2.8):
-\begin{quote}[Riemann-Roch para curvas]
+\textit{
+\begin{quote}
 Sea $X = C$ una curva algebraica proyectiva irreducible, de género $g(C) := h^0 (C, \omega_C) = h^1 (C, \O_C)$. Entonces para todo $L \cong \O_C (D) \in \Pic C$, se tiene que
 \[
     \chi (C, \O_C (D) ) = \chi (C, \O_C)  + \deg (D).
@@ -682,6 +683,7 @@ Equivalentemente,
     h^0 (C, \O_C (D)) - h^0 (C, \O_C (K_C - D)) = \deg (D) + 1 - g(C).
 \]
 \end{quote}
+}
 
 Informalmente, el Teorema de Riemann-Roch dice que para el caso de una variedad proyectiva irreducible $X$ que sea una curva, podemos escribir la característica de Euler-Poincaré de un dividor $D$ en función de invariantes geométricos de $X$ y una cantidad que se define geométricamente en función de $D$ (en el caso $X =C$ su grado). El propósito de estas notas es probar un enunciado similar para $X = S$ una superficie proyectiva suave irreducible.
 
@@ -689,18 +691,18 @@ Informalmente, el Teorema de Riemann-Roch dice que para el caso de una variedad 
 \section{Número de intersección}
 
 \begin{definition}
-Sean $C$ y $C'$ dos curvas irreducibles distintas en una superficie $S$, y $x \in C \cap C'$, notemos por $\O_x := \O_{S,x}$ al anillo local de $S$ en $x$. En $\O_x$, notemos por $f$ a la ecuación que define $C$, y similarmente $g$ a la que define $C'$. Luego definimos la \textbf{multiplicidad de intersección} de $C$ y $C'$ en $x$ como la cantidad
+Sean $C$ y $C'$ dos curvas irreducibles distintas en una superficie $S$, y $x \in C \cap C'$, notemos por $\O_x$ al anillo local de $S$ en $x$. En $\O_x$, notemos por $f$ una ecuación que define $C$, y similarmente $g$ a otra que define $C'$. Luego definimos la \textbf{multiplicidad de intersección} de $C$ y $C'$ en $x$ como la cantidad
 \[
     m_x (C \cap C') := \dim_{k} \O_x / (f,g).
 \]
 \end{definition}
 
 \begin{obs}
-A priori podría suceder que la dimensión de $\O_x/(f,g)$ como $k$-espacio vectorial sea infinito, sin embargo, como $C$ y $C'$ son curvas distintas, resulta que $\dim_k \O_x /(f,g)$ es finito, ya que podemos aplicar el siguiente resultado (cf. \cite[Corolario 11.8]{atiyah2018introductionToCommutativeAlgebra})
+A priori podría suceder que la dimensión de $\O_x/(f,g)$ como $k$-espacio vectorial sea infinita, sin embargo, como $C$ y $C'$ son curvas distintas, resulta que $\dim_k \O_x /(f,g)$ es finito, ya que podemos aplicar el siguiente resultado (cf. \cite[Corolario 11.8]{atiyah2018introductionToCommutativeAlgebra})
 \begin{quote}
 Sea $k$ un cuerpo algebraicamente cerrado y $B$ un dominio íntegro el cual es una $k$-álgebra finitamente generada. Entonces para todo ideal primo $\mathfrak p$ de $B$,
 \[
-    \operatorname{Height} (\mathfrak p) + \dim_{\text{Krull}} (B / \mathfrak p) = \dim_{\text{Krull}} (B).
+    \operatorname{height} (\mathfrak p) + \dim_{\text{Krull}} (B / \mathfrak p) = \dim_{\text{Krull}} (B).
 \]
 \end{quote}
 \end{obs}
@@ -715,12 +717,12 @@ Cuando $m_x ( C \cap C') = 1$, geométricamente lo que está pasando es que $C$ 
 \begin{definition}
 Sean $C$ y $C'$ dos curvas irreducibles distintas en $S$, definimos el \textbf{número de intersección}:
 \[
-    (C,C') := \sum_{x \in C \cap C'} m_x (C \cap C').
+    \langle C, C' \rangle := \sum_{x \in C \cap C'} m_x (C \cap C').
 \]
 \end{definition}
 
 \begin{obs}
-Nuevamente, podría suceder que la cantidad de la derecha sea infinita, pero ya vimos que cada término es finito, y más aún, notemos que la sumatoria tiene una cantidad finita de términos pues al ser $C$ y $C'$ curvas irreducibles distintas, no se pueden intersecar en más de finitos puntos: $C\cap C'$ es un cerrado de $C$ que no tiene muchas posibilidades, puede tener dimensión $1$ o $0$, y el primer caso no sucede pues $C \neq C'$.
+Nuevamente, podría suceder que la cantidad de la derecha sea infinita, pero ya vimos que cada término es finito, y más aún, notemos que la sumatoria tiene una cantidad finita de términos pues, al ser $C$ y $C'$ curvas irreducibles distintas, no se pueden intersecar en más de finitos puntos: $C\cap C'$ es un cerrado de $C$ que no tiene muchas posibilidades, puede tener dimensión $1$ o $0$, y el primer caso no sucede pues $C \neq C'$.
 \end{obs}
 
 Recordemos que $C$ y $C'$ se pueden pensar como haces invertibles $\O_S (-C)$ y $\O_S (-C')$ respectivamente, luego definimos el haz
@@ -729,23 +731,23 @@ Recordemos que $C$ y $C'$ se pueden pensar como haces invertibles $\O_S (-C)$ y 
 \]
 Resulta que este haz es un \textit{haz rascacielos}, concentrado en el conjunto finito $C \cap C'$; en cada uno de estos puntos $x$, tenemos que $(\O_{C \cap C'})_x = \O_x / (f,g)$. Por lo tanto
 \[
-    (C,C') = h^0 (S, \O_{C\cap C'}).
+    (C,C') = h^0 (S, \O_{C\cap C'})  = \chi (S, \O_{C \cap C'}).
 \]
 
 \begin{theorem}\label{th:teorema 1}
 Para $L$ y $L'$ dos fibrados en rectas de $\Pic S$, definimos
 \[
-    (L, L') := \chi (\O_S) - \chi (L^\vee) - \chi (L'^{\vee}) + \chi (L^\vee \otimes L'^{\vee}).
+   \langle L , L' \rangle  := \chi (\O_S) - \chi (L^\vee) - \chi (L'^{\vee}) + \chi (L^\vee \otimes L'^{\vee}).
 \]
-Entonces se tiene que $(\cdot, \cdot) : \Pic S \times \Pic S \to \reals$ es una forma simétrice bilineal en el grupo abeliano $\Pic S$, de tal suerte que si $C$ y $C'$ son dos curvas irreducibles distintas en $S$, se tiene que
+Entonces se tiene que $\langle \cdot, \cdot \rangle : \Pic S \times \Pic S \to \integers$ es una forma simétrice bilineal en el grupo abeliano $\Pic S$, de tal suerte que si $C$ y $C'$ son dos curvas irreducibles distintas en $S$, se tiene que
 \[
-    (\O_S (C), \O_ S (C')) = (C,C').
+    \langle \O_S (C), \O_ S (C')\rangle = \langle C,C'\rangle.
 \]
 \end{theorem}
 
 En otras palabras, el invariante geométrico número de intersección se puede traducir a un invariante cohomológico pensando a las curvas como haces invertibles.
 
-La demostración detallada del teorema se encuentra en \cite{beauville1996complexAlgebraicSurfaces}. Daré solamente un bosquejo.
+La demostración detallada del teorema se encuentra en \cite{beauville1996complexAlgebraicSurfaces}. Daré solamente un bosquejo:
 \begin{proof}[Sketch de la demostración]
 
 
@@ -760,7 +762,7 @@ La demostración detallada del teorema se encuentra en \cite{beauville1996comple
 es exacta.
 \item Sea $C$ una curva suave irreducible en $S$. Para todo $L \in \Pic S$, se tiene que
 \[
-    (\O_S (C), L) = \deg (\rest L C)
+    \langle \O_S (C), L \rangle = \deg (\rest L C)
 \]
 \item Sea $D$ un divisor en $S$, y $H$ una sección por unhiperplano de $S$, entonces existe $n \geq 0$ tal que $D + n H$ es una sección por un hiperplano. En particular, podemos escribir $D \sim A- B$, donde $A$ y $B$ son curvas suaves de $S$ con $A \sim D + n H$ y $B \sim n H$.
 \end{enumerate}
@@ -769,34 +771,34 @@ es exacta.
 
 \bigskip
 
-Ahora, el ítem (a) y la aditividad de la característica de Euler-Poincaré nos da $(\O_S (C), \O_S (C')) = (C, C')$, pues desarrollando la definición del lado izquierdo, se puede ver que es igual a $\chi (O_{C \cap C'}) = h^0 (C \cap C') = (C, C')$. Luego para probar el teorema basta probar la bilinearidad (que la forma es simétrica es obvio). Si $L$ y $L'$ son dos haces invertibles. Por el ítem (c), podemos escribir $L' = \O_S (A - B)$, donde $A$ y $B$ son dos curvas suaves en $S$. Consideremos la expresión
+Ahora, el ítem (a) y la aditividad de la característica de Euler-Poincaré nos da $\langle \O_S (C), \O_S (C')\rangle = \langle  C, C'\rangle$, pues desarrollando la definición del lado izquierdo, se puede ver que es igual a $\chi (O_{C \cap C'}) = h^0 (C \cap C') = \langle C, C'\rangle$. Luego para probar el teorema basta probar la bilinearidad (que la forma es simétrica es obvio). Si $L$ y $L'$ son dos haces invertibles. Por el ítem (c), podemos escribir $L' = \O_S (A - B)$, donde $A$ y $B$ son dos curvas suaves en $S$. Consideremos la expresión
 \[
-    s(L_1, L_2,L_3) := (L_1, L_2 \otimes L_3) - (L_1, L_2) - (L_1, L_3);
+    s(L_1, L_2,L_3) := \langle L_1, L_2 \otimes L_3 \rangle  - \langle L_1, L_2 \rangle  - \langle L_1, L_3 \rangle;
 \]
-claramente la expresión es simétrica en las tres variables, y el ítem (b) implica que si $L_1 = \O_S (C)$ para una curva irreducible suave $C$ de $S$, entonces $s(L_1,L_2, L_3) = 0$; similarmente si $L_2$ o $L_3$ lo es. Tomando $L_1 = L$, $L_2 = L'$ y $L_3 = \O_S (B)$, despejamos,
+claramente la expresión es simétrica en las tres variables, y el ítem (b) implica que si $L_1 = \O_S (C)$ para una curva irreducible suave $C$ de $S$, entonces $s(L_1,L_2, L_3) = 0$; simétricamente, si $L_2$ o $L_3$ es $\O_S (C)$ también se anula la expresión. Tomando $L_1 = L$, $L_2 = L'$ y $L_3 = \O_S (B)$, despejamos,
 \[
-    (L, L') = (L, \O_S (A)) - (L, \O_S (B)).
+    \langle L, L'\rangle  = \langle L, \O_S (A)\rangle - \langle L, \O_S (B)\rangle.
 \]
-Así, el ítem (b) prueba que $(L, L')$ es lineal en $L$. La simetría implica que es lineal en la segunda coordenada también.
+Así, el ítem (b) prueba que $\langle L, L' \rangle $ es lineal en $L$ (ambos términos lo son). La simetría implica que es lineal en la segunda coordenada también.
 \end{proof}
-En otras palabras, que $( \cdot, \cdot)$ sea bilineal en $\Pic S$, implica que:
+En otras palabras, que $\langle \cdot, \cdot\rangle $ sea bilineal en $\Pic S$, implica que:
 \begin{enumerate}[(i)]
-\item $ (L \otimes L', L'' ) = (L , L'') + (L', L'')$.
-\item $ (L^\vee, L') = - (L, L')$ y $(\O_S, L) = 0$.
+\item $ \langle L \otimes L', L'' \rangle = \langle L , L'' \rangle  + \langle L', L''\rangle$.
+\item $ \langle L^\vee, L'\rangle  = - \langle L, L'\rangle $ y $\langle \O_S, L\rangle  = 0$.
 \end{enumerate}
 (En la primera coordenada. Similarmente, en la segunda valen estas identidades).
 
 \begin{remark}
-Dados dos divisores en $S$, digamos $D$ y $D'$, la gracia del teorema es que podemos calcular el producto $(\O_S (D), \O_S (D'))$ reemplazando $D$ y $D'$ por divisores linealmente equivalentes (pues su representante en $\Pic S$ no cambia!).
+Dados dos divisores en $S$, digamos $D$ y $D'$, la gracia del teorema es que podemos calcular el producto $\langle \O_S (D), \O_S (D')\rangle$ reemplazando $D$ y $D'$ por divisores linealmente equivalentes (pues su representante en $\Pic S$ no cambia!).
 \end{remark}
 Esto tiene dos implicancias:
 
 \begin{proposition}
 \begin{enumerate}[(1)]
-\item Sea $C$ una curva suave, $f : S \to C$ un morfismo sobreyectivo, $F$ una fibra de $f$. Entonces $(\O_S (F), \O_S (F)) = 0$.
+\item Sea $C$ una curva suave, $f : S \to C$ un morfismo sobreyectivo, $F$ una fibra de $f$. Entonces $\langle \O_S (F), \O_S (F)\rangle  = 0$.
 \item Si $S'$ es una superficie y $g : S \to S'$ es un morfismo genéricamente finito de grado $d$, entonces
 \[
-    (\O_S (g^* D), \O_S (g^* D')) = d ( \O_S (D), \O_S (D')).
+    \langle \O_S (g^* D), \O_S (g^* D')\rangle  = d \langle  \O_S (D), \O_S (D')\rangle .
 \]
 \end{enumerate}
 \end{proposition}
@@ -804,7 +806,7 @@ Esto tiene dos implicancias:
 \begin{enumerate}[(1)]
 \item Escribamos $F = f^* \{x\}$ para algún $C$. Existe un divisor $A$ en $C$ linealmente equivalente a $x$ tal que $x \not \in A$, con lo cual $F \sim f^* A$. Como $f^* A$ es una combinación lineal de fibras de $f$ distintas de $F$, tenemos que
 \[
-    (\O_S (F), \O_S (F)) = (\O_S (F), f^* A) = 0.
+    \langle \O_S (F), \O_S (F)\rangle  = \langle \O_S (F), f^* A\rangle  = 0.
 \]
 \item Por el ítem (c), basta probar la fórmula para el caso en el que $D$ y $D'$ son secciones de hiperplanos de $S$. Existe un abierto $U$ de $S'$ tal que las fibras de $g$ tienen grado $d$. Entonces podemos mover $D$ y $D'$ de tal manera que se intersecten transversalmente y la intersección caiga en $U$. Consecuentemente, $g^* D$ y $g^* D'$ se intersectan transversalmente y además $g^* D \cap g^* D' = g^{-1} (D \cap D')$, y se sigue el resultado.
 \end{enumerate}
@@ -813,7 +815,7 @@ Esto tiene dos implicancias:
 \begin{example}[Teorema de Bezout]
 Tomemos $S = \mathbb{P}^2$. Recordemos que $\Pic {\mathbb{P}^2} \cong \integers$: más precisamente, toda curva de grado $d$ es linealmente equivalente a $d L$ para una recta $L$. Así, sean $C$ y $C'$ dos curvas de grado $d$ y $d'$, y sean $L$ y $L'$ dos rectas distintas; como $C \sim d L$ y $C' \sim d' L'$, el Teorema \ref{th:teorema 1} implica el Teorema de Bezout:
 \[
-    (C, C') = (\O_S (C), \O_S (C')) = (d L, d L' ) = d d' (L, L') = d d'.
+    \langle C, C' \rangle  = \langle \O_S (C), \O_S (C')\rangle  = \langle d L, d L' \rangle = d d' \langle L, L'\rangle  = d d'.
 \]
 \end{example}
 
@@ -823,7 +825,7 @@ Tomemos $S = \mathbb{P}^2$. Recordemos que $\Pic {\mathbb{P}^2} \cong \integers$
 
 Recordemos Teorema de dualidad de Serre (cuya demostración vimos en \cite[Teorema 5.1.3]{notas_pedro}):
 
-\begin{theorem}{Dualidad de Serre}\label{th:dualidad de serre}
+\begin{theorem}[Dualidad de Serre]\label{th:dualidad de serre}
 Sea $X$ una variedad algebraica proyectiva suave e irreducible de dimensión $n$, y sea $\omega_X = \det (\Omega_X^1)$. Entonces, para todo fibrado vectorial $E \to X$,
 \[
     H^i (X, E) \cong H^{n-i} (X, E^\vee \otimes \omega_X)^{\vee}.
@@ -837,22 +839,22 @@ Gracias a esto podemos probar el Teorema de Riemann-Roch para superficies:
 \begin{theorem}[Riemann-Roch para superficies]\label{th:riemann-roch para superficies}
 Para todo $L \in \Pic S$, se tiene
 \[
-    \chi (L) = \chi (\O_S) + \frac 1 2 \left ( (L, L) - (L, \omega_S) \right ).
+    \chi (L) = \chi (\O_S) + \frac 1 2 \big ( \langle L, L\rangle  - \langle L, \omega_S\rangle  \big ).
 \]
 \end{theorem}
 \begin{proof}
 Primero calculemos por definición:
 \[
-    (L^\vee, L \otimes \omega_S^\vee) := \chi (\O_S) - \chi (L) - \chi (\omega_S \otimes L^\vee) + \chi (\omega_S).
+    \langle L^\vee, L \otimes \omega_S^\vee \rangle  := \chi (\O_S) - \chi (L) - \chi (\omega_S \otimes L^\vee) + \chi (\omega_S).
 \]
 Por dualidad de Serre \ref{th:dualidad de serre}, $\chi (\omega_S) = \chi (\O_S)$ y $\chi (\omega_S \otimes L ^\vee) = \chi (L)$, y por lo tanto
 \[
-    (L^\vee, L \otimes \omega_S^\vee) = 2 \left ( \chi (\O_S) - \chi (L) \right).
+    \langle L^\vee, L \otimes \omega_S^\vee \rangle = 2 \left ( \chi (\O_S) - \chi (L) \right).
 \]
 Por otro lado, aplicando bilinealidad (\ref{th:teorema 1}) del lado izquierdo:
 \begin{align*}
-(L^\vee, L \otimes \omega_S^\vee) &= (L^\vee, L) + (L^\vee, \omega_S^\vee)\\
-&= - (L , L) + (L, \omega_S).
+\langle L^\vee, L \otimes \omega_S^\vee \rangle  &= \langle L^\vee, L\rangle + \langle L^\vee, \omega_S^\vee \rangle \\
+&= - \langle L , L\rangle  + \langle L, \omega_S\rangle.
 \end{align*}
 Juntando ambas igualdades obtenemos el teorema.
 \end{proof}
@@ -861,12 +863,12 @@ Juntando ambas igualdades obtenemos el teorema.
 \begin{remark}
 Podemos reescribir el enunacio de Riemann-Roch en término de divisores. Sea $h^i (D) := h^i(S, \O_S (D))$ y $K_S$ un divisor canónico, i.e., $\O_S (K_S) = \omega_S$. En este lenguaje la dualidad de Serre \ref{th:dualidad de serre} nos queda $h^i (D) = h^{n-i} (K_S - D)$ con $n = \dim (S) = 2$. Así, Riemann-Roch \ref{th:riemann-roch para superficies} queda:
 \[
-    h^0 (D) + h^0 (K-D) - h^1 (D) = \chi (\O_S) + \frac 1 2 \left ( (\O_S (D), \O_S (D) - (\O_S (D), \O_S (K_S))) \right ).
+    h^0 (D) + h^0 (K-D) - h^1 (D) = \chi (\O_S) + \frac 1 2 \big ( \langle \O_S (D), \O_S (D) \rangle - \langle \O_S (D), \O_S (K_S) \rangle \big ).
 \]
 
 Usualmente no tendremos información de $h^1 (D)$, aún así Riemann-roch nos provee de la siguiente desigualdad útil:
 \[
-    h^0 (D) + h^0 (K_S - D) \geq \chi (\O_S) + \frac 1 2 \left ( (\O_S (D), \O_S (D)) - ( \O_S (D), \O_S (K)) \right ).
+    h^0 (D) + h^0 (K_S - D) \geq \chi (\O_S) + \frac 1 2 \big ( \langle \O_S (D), \O_S (D) \rangle  - \langle  \O_S (D), \O_S (K)\rangle  \big ).
 \]
 \end{remark}
 
@@ -874,7 +876,7 @@ Sea $g(C) := h^1 (C, \O_C)$ el género de una curva $C$ suave irreducible en $S$
 \begin{theorem}[Fórmula del Género]\label{th:formula del genero}
 Sea $C$ una curva irreducible suave en $S$. Entonces
 \[
-    g(C) = 1 + \frac 1 2 \left ((\O_S (C), \O_S (C)) - (\O_S (C), \O_S (K_S)) \right ).
+    g(C) = 1 + \frac 1 2 \big ( \langle \O_S (C), \O_S (C) \rangle  - \langle \O_S (C), \O_S (K_S) \rangle  \big ).
 \]
 \end{theorem}
 \begin{proof}
@@ -893,14 +895,17 @@ Como $ \chi (\O_C ) := 1 - g(C)$, nos queda,
     1 - g(C) = \chi (\O_S) - \chi (\O_S (-C)).
 \]
 Finalmente, obtenemos la fórmula aplicando Riemann-Roch con $L = \O_S (-C)$, pues nos dice que
-\[
-    \chi (\O_S (-C)) = \chi (\O_S) + \frac 1 2 \left ( (\O_S (-C), \O_S (-C)) - (\O_S (-C), \O_S (K_S))\right) = \chi (\O_S) + \frac 1 2 \left ( (\O _S (C), \O_S (C)) + (\O_S (C), \O_S (K_S)) \right ),
-\]
+\begin{align*}
+    \chi (\O_S (-C)) &= \chi (\O_S) + \frac 1 2 \big ( \langle \O_S (-C), \O_S (-C) \rangle - \langle \O_S (-C), \O_S (K_S) \rangle \big) \\
+    &= \chi (\O_S) + \frac 1 2 \big ( \langle \O _S (C), \O_S (C)\rangle + \langle \O_S (C), \O_S (K_S) \rangle  \big ),
+\end{align*}
 con lo cual podemos reemplazar esto arriba y despejar $g(C)$.
 \end{proof}
 
 
-
+\begin{example}
+Cuando $S = \mathbb{P}^2$, si $C$ es una curva irreducible suave de grado $d$ en $S$, como $\Pic S \cong \integers$, podemos elegir cualquier fibrado en rectas $L$ y se tiene que $C \sim d L$. Recordar que $\omega_S = -3 L'$ para cualquier otra recta $L'$ distinta de $L$. Entonces la Fórmula del Género
+\end{example}
 
 
 

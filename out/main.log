@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  22 NOV 2023 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  22 NOV 2023 20:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1156,45 +1156,44 @@ File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [1{/home/whitengine/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 }{/home/whitengine/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/w
 hitengine/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 8.36993pt on input line 700.
- [2]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 701
-.
+LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
+(Font)              scaled to size 8.36993pt on input line 686.
+LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
+(Font)              scaled to size 6.50995pt on input line 686.
 
-(/home/whitengine/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
+Overfull \hbox (6.10158pt too wide) in paragraph at lines 686--686
+[]\T1/fnc/m/it/12 Sea $\FML/fncmi/m/it/12 X \FMS/fncm/m/n/12  \FML/fncmi/m/it/
+12 C$ \T1/fnc/m/it/12 una cur-va al-ge-brai-ca pro-yec-ti-va irre-du-ci-ble, de
+ gé-ne-ro $\FML/fncmi/m/it/12 g\T1/fnc/m/n/12 (\FML/fncmi/m/it/12 C\T1/fnc/m/n/
+12 ) :\FMS/fncm/m/n/12  \FML/fncmi/m/it/12 h[]\T1/fnc/m/n/12 (\FML/fncmi/m/it/
+12 C; ![]\T1/fnc/m/n/12 ) \FMS/fncm/m/n/12 
+ []
+
+LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
+(Font)              scaled to size 8.36993pt on input line 702.
+[2]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 703
+.
+ (/home/whitengine/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 8.36993pt on input line 736.
-LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 6.50995pt on input line 736.
- [3]
-Overfull \hbox (6.18599pt too wide) in paragraph at lines 772--773
+[3]
+Overfull \hbox (7.34557pt too wide) in paragraph at lines 774--775
 []\T1/fnc/m/n/12 Ahora, el ítem (a) y la adi-ti-vi-dad de la ca-rac-te-rís-ti-c
-a de Euler-Poincaré nos da $(\FMS/fncm/m/n/12 O[]\T1/fnc/m/n/12 (\FML/fncmi/m/i
+a de Euler-Poincaré nos da $\FMS/fncm/m/n/12 hO[]\T1/fnc/m/n/12 (\FML/fncmi/m/i
 t/12 C\T1/fnc/m/n/12 )\FML/fncmi/m/it/12 ; \FMS/fncm/m/n/12 O[]\T1/fnc/m/n/12 (
-\FML/fncmi/m/it/12 C[]\T1/fnc/m/n/12 )) \FMS/fncm/m/n/12 
+\FML/fncmi/m/it/12 C[]\T1/fnc/m/n/12 )\FMS/fncm/m/n/12 i 
  []
 
 
-Overfull \hbox (3.66212pt too wide) in paragraph at lines 772--773
-\T1/fnc/m/n/12 (\FML/fncmi/m/it/12 C; C[]\T1/fnc/m/n/12 )$, pues de-sa-rro-llan
--do la de-fi-ni-ción del la-do iz-quier-do, se pue-de ver que es igual a $\FML/
-fncmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FML/fncmi/m/it/12 O[]\T1/fnc/m/n/12 ) \FMS/fn
-cm/m/n/12 
+Overfull \hbox (4.8217pt too wide) in paragraph at lines 774--775
+\FMS/fncm/m/n/12 h\FML/fncmi/m/it/12 C; C[]\FMS/fncm/m/n/12 i$\T1/fnc/m/n/12 , 
+pues de-sa-rro-llan-do la de-fi-ni-ción del la-do iz-quier-do, se pue-de ver qu
+e es igual a $\FML/fncmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FML/fncmi/m/it/12 O[]\T1/f
+nc/m/n/12 ) \FMS/fncm/m/n/12 
  []
 
 [4] [5]
-Overfull \hbox (55.00044pt too wide) detected at line 898
-\FML/fncmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FMS/fncm/m/n/12 O[]\T1/fnc/m/n/12 (\FMS/
-fncm/m/n/12 ^^@\FML/fncmi/m/it/12 C\T1/fnc/m/n/12 )) \FMS/fncm/m/n/12  \FML/fn
-cmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FMS/fncm/m/n/12 O[]\T1/fnc/m/n/12 ) \FMS/fncm/m
-/n/12 € [] []  \FML/fncmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FMS/fncm/m/n/12 O[]\T1/f
-nc/m/n/12 ) \FMS/fncm/m/n/12 € [] [] \FML/fncmi/m/it/12 ;
- []
-
-
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
 ra-Superficies/out/main.bbl
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
@@ -1214,8 +1213,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9039E3C67A5A9ED851A4341DC28D853D;285.
  ) 
 Here is how much of TeX's memory you used:
- 25183 strings out of 476017
- 472703 string characters out of 5786780
+ 25184 strings out of 476017
+ 472714 string characters out of 5786780
  1871666 words of memory out of 5000000
  44956 multiletter control sequences out of 15000+600000
  594985 words of font info for 168 fonts, out of 8000000 for 9000
@@ -1236,10 +1235,10 @@ live/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></home/whitengine
 texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></home/whitengine/t
 exlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semes
-tre/Rieman-Roch-para-Superficies/out/main.pdf" (6 pages, 145346 bytes).
+tre/Rieman-Roch-para-Superficies/out/main.pdf" (6 pages, 145956 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
