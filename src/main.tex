@@ -904,7 +904,16 @@ con lo cual podemos reemplazar esto arriba y despejar $g(C)$.
 
 
 \begin{example}
-Cuando $S = \mathbb{P}^2$, si $C$ es una curva irreducible suave de grado $d$ en $S$, como $\Pic S \cong \integers$, podemos elegir cualquier fibrado en rectas $L$ y se tiene que $C \sim d L$. Recordar que $\omega_S = -3 L'$ para cualquier otra recta $L'$ distinta de $L$. Entonces la Fórmula del Género
+Cuando $S = \mathbb{P}^2$, si $C$ es una curva irreducible suave de grado $d$ en $S$, como $\Pic S \cong \integers$, podemos elegir cualquier fibrado en rectas $L$ y se tiene que $C \sim d L$. Recordar que $\omega_S = -3 L'$ para cualquier otra recta $L'$ distinta de $L$. Entonces la Fórmula del Género \ref{th:formula del genero} implica que
+\begin{align*}
+g(C) = 1 + \frac 1 2 \big ( d^2 \langle L, L \rangle - 3 d \langle L, L' \rangle \big ).
+\end{align*}
+Ahora, $\langle L, L' \rangle = 1$ porque $L$ y $L'$ son dos rectas distintas en $\mathbb{P}^2$; por otro lado, $\langle L, L \rangle := \chi (\O_{\mathbb{P}^2}) - 2 \chi (L^\vee) + \chi (L^\vee \otimes L^\vee)$, pero cada característica de Euler-Poincaré se puede calcular conociendo los coeficientes de cohomología (ver \cite[Teorema 4.2.1]{notas_pedro}): $\chi (\O_{\mathbb{P}^2}) = 1$, $\chi (L^\vee) = 0$, $\chi (L^\vee \otimes L^\vee)$ (ya que podemos notar que $L^\vee \cong \O_{\mathbb{P}^2} (-1)$ y $L^\vee \otimes L^\vee \cong \O_{\mathbb{P}^2} (-2)$). Con lo cual,
+\[
+    g(C) = 1 + \frac 1 2 \big ( d^2 - 3d \big) = \frac{(d-1)(d-2)}{2}.
+\]
+
+En particular, si $C$ es una curva elíptica entonces $g(C) = 1$.
 \end{example}
 
 
