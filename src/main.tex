@@ -17,8 +17,19 @@
 \usepackage{amscd,amssymb,amsfonts,amsmath}
 \usepackage{tikz-cd}
 
+\usepackage{subfiles} %esto es para modularizar el overleaf
+%para usar este paquete solamente hay que usar el comando
+%\subfile{}
+
+\graphicspath{{./}} %esto es para que encuentre las figuras hechas con pdf_tex en inkscape
+\usepackage{subfig}
+\usepackage{caption} %es para captionoffigure
+\usepackage{xparse}
+\usepackage{xstring}
+
 \usepackage{bm}
-\usepackage{graphics}
+\usepackage{graphicx}
+%%\usepackage{graphics}
 \usepackage{epsfig}
 \usepackage{mathrsfs}
 \usepackage{xcolor}
@@ -579,6 +590,72 @@
 
 
 
+\usepackage{calc}
+
+
+\NewDocumentCommand{\Inkscape}{O{1} m m}{
+\begin{center}
+\def\svgwidth{1\textwidth}
+\input{#3}
+\captionof{figure}{#2}
+\end{center}
+}
+
+
+
+
+
+
+
+
+
+%%%DIBUJOS DE KNOTS
+
+
+\usetikzlibrary{
+  babel,%CAUSA PROBLEMAS PARA COMPILAR TIKZCD QUE USA "" PARA DESIGNAR CADA TEXTO DE UNA FLECHA. SE ARREGLA USANDO \usetikzlibrary{babel} despues de \usepackage{tikz-cd}.
+  %
+  %el resto es para agregar el QED Symbol custom como nudos
+  knots,
+  hobby,
+  decorations.pathreplacing,
+  shapes.geometric,
+  calc
+}
+
+%%DIBUJA EL five knot
+\newcommand{\fiveknot}{%
+\begin{tikzpicture}[transform canvas={scale=0.1}]
+\begin{knot}[
+  consider self intersections=true,
+%  draft mode=crossings,
+  flip crossing/.list={2,4},
+  only when rendering/.style={
+%    show curve controls
+  }
+]
+\strand[black, line width=8pt] (2,0) .. controls +(0,1) and +(54:1.0) .. (144:2) .. controls +(54:-1.0) and +(18:-1.0) .. (-72:2) .. controls +(18:1.0) and +(162:-1.0) .. (72:2) .. controls +(162:1.0) and +(126:1.0) .. (-144:2) .. controls +(126:-1.0) and +(0,-1.0) .. (2,0);
+\end{knot}
+\end{tikzpicture}
+}
+
+
+%DIBUJA EL TREFOIL KNOT
+\newcommand{\trefoilknot}{%
+\begin{tikzpicture}[transform canvas={scale=0.1}, line width=10pt]
+\begin{knot}[
+  consider self intersections=true,
+%  draft mode=crossings,
+  flip crossing=2,
+  only when rendering/.style={
+%    show curve controls
+  }
+  ]
+\strand[black, line width=10pt] (0,2) .. controls +(2.2,0) and +(120:-2.2) .. (210:2) .. controls +(120:2.2) and +(60:2.2) .. (-30:2) .. controls +(60:-2.2) and +(-2.2,0) .. (0,2);
+\end{knot}
+\end{tikzpicture}
+}
+
 
 
 
@@ -587,6 +664,9 @@
 
 
 \begin{document}
+
+%%%% CAMBIAR EL QUED POR UN 5-KNOT
+\renewcommand{\qedsymbol}{\fiveknot}
 
 \title{Riemann-Roch para superficies}
 
@@ -624,7 +704,7 @@ Agradezco al profesor Pedro por sugerir este tema para la ayudantía, por compar
 
 \section{Notación}
 
-Todas las superficies, que notaremos $S,S'$, serán superficies suaves proyectivas irreducibles sobre un cuerpo algebraicamente cerrado $k$. Notaremos por $D,D'$ a dos divisores de $S$; $D\sim D'$ significa que $D$ y $D'$ son linealmente equivalentes, ess decir, $D-D'$ es un divisor principal. $\O_S (D)$ denota al haz invertible correspondiente al divisor $D$, y $H^i (S, \O_S (D)) =: H^i (\O_S (D)) =: H^i (D)$ a su $i$-ésimo grupo de cohomologia respecto del haz $\O_S (D)$.
+Todas las superficies, que notaremos $S,S'$, serán superficies suaves proyectivas irreducibles sobre un cuerpo algebraicamente cerrado $k$. Notaremos por $D,D'$ a dos divisores de $S$; $D\sim D'$ significa que $D$ y $D'$ son linealmente equivalentes, es decir, $D-D'$ es un divisor principal. $\O_S (D)$ denota al haz invertible correspondiente al divisor $D$, y $H^i (S, \O_S (D)) =: H^i (\O_S (D)) =: H^i (D)$ a su $i$-ésimo grupo de cohomologia respecto del haz $\O_S (D)$.
 
 Recordemos que si $X$ es una variedad algebraica proyectiva de dimensión $n$, y $\mathcal F$ es un haz coherente en $X$ (por ejemplo, en estas notas estaremos trabajando exactamente dentro de este contexto). Definimos la \textbf{característica de Euler-Poincaré} de $\mathcal F$ como la cantidad finita (gracias a los teoremas de finitud y anulación de Grothendieck; ver \cite[\S 5]{notas_pedro}):
 \[
@@ -698,11 +778,11 @@ Sean $C$ y $C'$ dos curvas irreducibles distintas en una superficie $S$, y $x \i
 \end{definition}
 
 \begin{obs}
-A priori podría suceder que la dimensión de $\O_x/(f,g)$ como $k$-espacio vectorial sea infinita, sin embargo, como $C$ y $C'$ son curvas distintas, resulta que $\dim_k \O_x /(f,g)$ es finito, ya que podemos aplicar el siguiente resultado (cf. \cite[Corolario 11.8]{atiyah2018introductionToCommutativeAlgebra})
+A priori podría suceder que la dimensión de $\O_x/(f,g)$ como $k$-espacio vectorial sea infinita, sin embargo, como $C$ y $C'$ son curvas distintas, resulta que $\dim_k \O_x /(f,g)$ es finita, ya que podemos aplicar el siguiente resultado (cf. \cite[Corolario 11.8]{atiyah2018introductionToCommutativeAlgebra})
 \begin{quote}
 Sea $k$ un cuerpo algebraicamente cerrado y $B$ un dominio íntegro el cual es una $k$-álgebra finitamente generada. Entonces para todo ideal primo $\mathfrak p$ de $B$,
 \[
-    \operatorname{height} (\mathfrak p) + \dim_{\text{Krull}} (B / \mathfrak p) = \dim_{\text{Krull}} (B).
+    \operatorname{height}\: (\mathfrak p) + \dim_{\text{Krull}} (B / \mathfrak p) = \dim_{\text{Krull}} (B).
 \]
 \end{quote}
 \end{obs}
@@ -710,6 +790,12 @@ Sea $k$ un cuerpo algebraicamente cerrado y $B$ un dominio íntegro el cual es u
 \begin{example}
 Cuando $m_x ( C \cap C') = 1$, geométricamente lo que está pasando es que $C$ y $C'$ son \textbf{transversales} en $x$, i.e., $f$ y $g$ forman un sistema local de coordenadas en un entorno abierto de $x$ (por ejemplo, si las tangentes de $C$ y $C'$ en $x$ son distintas). En efecto, notar que $m_x (C \cap C') = 1$ si y solo si $f$ y $g$ generan el ideal maximal $\mathfrak m_x \subset \O_x$. Claramente si $(f,g) = \mathfrak m_x$ se tiene que $\O_x / (f,g) = \O_x / \mathfrak m_x$ es un cuerpo pues estamos cocientando por un ideal maximal. Recíprocamente, si $\O_x /(f,g)$ tiene dimensión $1$, es un cuerpo, y por lo tanto $(f,g)$ es un ideal maximal de $\O_x$; como $(f,g) \subset \mathfrak m_x$ se sigue que de hecho vale la igualdad.
 \end{example}
+
+\begin{center}
+\centering
+\Inkscape{Ejemplo de dos curvas $C$ y $C'$ tales que se cortan transversalmente en $x \in C \cap C'$, i.e., $m_x (C \cap C') = 1$.}{"./figura_interseccion.pdf_tex"}
+
+\end{center}
 
 
 
@@ -727,7 +813,7 @@ Nuevamente, podría suceder que la cantidad de la derecha sea infinita, pero ya 
 
 Recordemos que $C$ y $C'$ se pueden pensar como haces invertibles $\O_S (-C)$ y $\O_S (-C')$ respectivamente, luego definimos el haz
 \[
-    \O_{C \cap C'} := \O_S / \left ( \O_S (-C) \oplus \O_S (-C') \right).
+    \O_{C \cap C'} := \O_S \big / \left ( \O_S (-C) \oplus \O_S (-C') \right).
 \]
 Resulta que este haz es un \textit{haz rascacielos}, concentrado en el conjunto finito $C \cap C'$; en cada uno de estos puntos $x$, tenemos que $(\O_{C \cap C'})_x = \O_x / (f,g)$. Por lo tanto
 \[
@@ -739,7 +825,7 @@ Para $L$ y $L'$ dos fibrados en rectas de $\Pic S$, definimos
 \[
    \langle L , L' \rangle  := \chi (\O_S) - \chi (L^\vee) - \chi (L'^{\vee}) + \chi (L^\vee \otimes L'^{\vee}).
 \]
-Entonces se tiene que $\langle \cdot, \cdot \rangle : \Pic S \times \Pic S \to \integers$ es una forma simétrice bilineal en el grupo abeliano $\Pic S$, de tal suerte que si $C$ y $C'$ son dos curvas irreducibles distintas en $S$, se tiene que
+Entonces se tiene que $\langle \cdot, \cdot \rangle : \Pic S \times \Pic S \to \reals$ es una forma simétrice bilineal en el grupo abeliano $\Pic S$, de tal suerte que si $C$ y $C'$ son dos curvas irreducibles distintas en $S$, se tiene que
 \[
     \langle \O_S (C), \O_ S (C')\rangle = \langle C,C'\rangle.
 \]
@@ -764,14 +850,14 @@ es exacta.
 \[
     \langle \O_S (C), L \rangle = \deg (\rest L C)
 \]
-\item Sea $D$ un divisor en $S$, y $H$ una sección por unhiperplano de $S$, entonces existe $n \geq 0$ tal que $D + n H$ es una sección por un hiperplano. En particular, podemos escribir $D \sim A- B$, donde $A$ y $B$ son curvas suaves de $S$ con $A \sim D + n H$ y $B \sim n H$.
+\item Sea $D$ un divisor en $S$, y $H$ una sección por un hiperplano de $S$, entonces existe $n \geq 0$ tal que $D + n H$ es una sección por un hiperplano. En particular, podemos escribir $D \sim A- B$, donde $A$ y $B$ son curvas suaves de $S$ con $A \sim D + n H$ y $B \sim n H$.
 \end{enumerate}
 \end{lemma}
 (El ítem (c) fue visto en clase).
 
 \bigskip
 
-Ahora, el ítem (a) y la aditividad de la característica de Euler-Poincaré nos da $\langle \O_S (C), \O_S (C')\rangle = \langle  C, C'\rangle$, pues desarrollando la definición del lado izquierdo, se puede ver que es igual a $\chi (O_{C \cap C'}) = h^0 (C \cap C') = \langle C, C'\rangle$. Luego para probar el teorema basta probar la bilinearidad (que la forma es simétrica es obvio). Si $L$ y $L'$ son dos haces invertibles. Por el ítem (c), podemos escribir $L' = \O_S (A - B)$, donde $A$ y $B$ son dos curvas suaves en $S$. Consideremos la expresión
+Ahora, el ítem (a) y la aditividad de la característica de Euler-Poincaré nos da $\langle \O_S (C), \O_S (C')\rangle = \langle  C, C'\rangle$, pues desarrollando la definición del lado izquierdo, se puede ver que es igual a $\chi (\O_{C \cap C'}) = h^0 (C \cap C') = \langle C, C'\rangle$. Luego para probar el teorema basta probar la bilinearidad (que la forma es simétrica es obvio). Si $L$ y $L'$ son dos haces invertibles. Por el ítem (c), podemos escribir $L' = \O_S (A - B)$, donde $A$ y $B$ son dos curvas suaves en $S$. Consideremos la expresión
 \[
     s(L_1, L_2,L_3) := \langle L_1, L_2 \otimes L_3 \rangle  - \langle L_1, L_2 \rangle  - \langle L_1, L_3 \rangle;
 \]
@@ -861,7 +947,7 @@ Juntando ambas igualdades obtenemos el teorema.
 
 
 \begin{remark}
-Podemos reescribir el enunacio de Riemann-Roch en término de divisores. Sea $h^i (D) := h^i(S, \O_S (D))$ y $K_S$ un divisor canónico, i.e., $\O_S (K_S) = \omega_S$. En este lenguaje la dualidad de Serre \ref{th:dualidad de serre} nos queda $h^i (D) = h^{n-i} (K_S - D)$ con $n = \dim (S) = 2$. Así, Riemann-Roch \ref{th:riemann-roch para superficies} queda:
+Podemos reescribir el enunacio de Riemann-Roch en término de divisores. Sea $h^i (D) := h^i(S, \O_S (D))$ y $K_S$ un divisor canónico, i.e., $\O_S (K_S) = \omega_S$. En este lenguaje la dualidad de Serre \ref{th:dualidad de serre} nos queda $h^i (D) = h^{n-i} (K_S - D)$ con $n = \dim (S) = 2$. Así, Riemann-Roch \ref{th:riemann-roch para superficies} se reescribe como:
 \[
     h^0 (D) + h^0 (K-D) - h^1 (D) = \chi (\O_S) + \frac 1 2 \big ( \langle \O_S (D), \O_S (D) \rangle - \langle \O_S (D), \O_S (K_S) \rangle \big ).
 \]
@@ -871,6 +957,8 @@ Usualmente no tendremos información de $h^1 (D)$, aún así Riemann-roch nos pr
     h^0 (D) + h^0 (K_S - D) \geq \chi (\O_S) + \frac 1 2 \big ( \langle \O_S (D), \O_S (D) \rangle  - \langle  \O_S (D), \O_S (K)\rangle  \big ).
 \]
 \end{remark}
+
+\bigskip
 
 Sea $g(C) := h^1 (C, \O_C)$ el género de una curva $C$ suave irreducible en $S$, entonces podemos deducir la siguiente fórmula a partir de Riemann-Roch:
 \begin{theorem}[Fórmula del Género]\label{th:formula del genero}
@@ -908,12 +996,12 @@ Cuando $S = \mathbb{P}^2$, si $C$ es una curva irreducible suave de grado $d$ en
 \begin{align*}
 g(C) = 1 + \frac 1 2 \big ( d^2 \langle L, L \rangle - 3 d \langle L, L' \rangle \big ).
 \end{align*}
-Ahora, $\langle L, L' \rangle = 1$ porque $L$ y $L'$ son dos rectas distintas en $\mathbb{P}^2$; por otro lado, $\langle L, L \rangle := \chi (\O_{\mathbb{P}^2}) - 2 \chi (L^\vee) + \chi (L^\vee \otimes L^\vee)$, pero cada característica de Euler-Poincaré se puede calcular conociendo los coeficientes de cohomología (ver \cite[Teorema 4.2.1]{notas_pedro}): $\chi (\O_{\mathbb{P}^2}) = 1$, $\chi (L^\vee) = 0$, $\chi (L^\vee \otimes L^\vee)$ (ya que podemos notar que $L^\vee \cong \O_{\mathbb{P}^2} (-1)$ y $L^\vee \otimes L^\vee \cong \O_{\mathbb{P}^2} (-2)$). Con lo cual,
+Ahora, $\langle L, L' \rangle = 1$ porque $L$ y $L'$ son dos rectas distintas en $\mathbb{P}^2$; por otro lado, $\langle L, L \rangle := \chi (\O_{\mathbb{P}^2}) - 2 \chi (L^\vee) + \chi (L^\vee \otimes L^\vee)$, pero cada característica de Euler-Poincaré se puede calcular conociendo los coeficientes de cohomología (ver \cite[Teorema 4.2.1]{notas_pedro}): $\chi (\O_{\mathbb{P}^2}) = 1$, $\chi (L^\vee) = 0$, $\chi (L^\vee \otimes L^\vee) = 0$, ya que podemos notar que $L^\vee \cong \O_{\mathbb{P}^2} (-1)$ y $L^\vee \otimes L^\vee \cong \O_{\mathbb{P}^2} (-2)$. Consecuentemente,
 \[
     g(C) = 1 + \frac 1 2 \big ( d^2 - 3d \big) = \frac{(d-1)(d-2)}{2}.
 \]
 
-En particular, si $C$ es una curva elíptica entonces $g(C) = 1$.
+En particular, si $C$ es una curva elíptica, entonces $g(C) = 1$ porque $d = 3$.
 \end{example}
 
 

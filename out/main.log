@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  23 NOV 2023 10:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  6 DEC 2023 18:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -712,6 +712,70 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowwidth=\dimen267
 \pgfarrowlinewidth=\dimen268
 )))
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/subfiles/subfiles.sty
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+))
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen269
+\captionmargin=\dimen270
+\caption@leftmargin=\dimen271
+\caption@rightmargin=\dimen272
+\caption@width=\dimen273
+\caption@indent=\dimen274
+\caption@parindent=\dimen275
+\caption@hangindent=\dimen276
+Package caption Info: AMS or SMF document class detected.
+
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/caption/caption-ams-smf.sto
+File: caption-ams-smf.sto 2020/08/22 v2.0 Adaption of the caption package to th
+e AMS and SMF document classes (AR)
+))
+\c@caption@flags=\count296
+\c@continuedfloat=\count297
+)
+\c@KVtest=\count298
+\sf@farskip=\skip58
+\sf@captopadj=\dimen277
+\sf@capskip=\skip59
+\sf@nearskip=\skip60
+\c@subfigure=\count299
+\c@subfigure@save=\count300
+\c@lofdepth=\count301
+\c@subtable=\count302
+\c@subtable@save=\count303
+\c@lotdepth=\count304
+\sf@top=\skip61
+\sf@bottom=\skip62
+)
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.st
+y (/home/whitengine/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-03-30 L3 programming layer (loader) 
+
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.
+def
+File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count305
+\l__pdf_internal_box=\box65
+))
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/xstring/xstring.sty
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count306
+\decimalpart=\count307
+)
+Package: xstring 2023/01/14 v1.85 String manipulations (CT)
+)
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup8
@@ -726,8 +790,8 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 )
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
-\epsfxsize=\dimen269
-\epsfysize=\dimen270
+\epsfxsize=\dimen278
+\epsfysize=\dimen279
 )
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
@@ -739,20 +803,20 @@ Package: epigraph 2020/01/02 v1.5e typesetting epigraphs
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/nextpage/nextpage.sty
 Package: nextpage 2009/09/03 v1.1a additional page commands
 )
-\beforeepigraphskip=\skip58
-\afterepigraphskip=\skip59
-\epigraphwidth=\skip60
-\epigraphrule=\skip61
+\beforeepigraphskip=\skip63
+\afterepigraphskip=\skip64
+\epigraphwidth=\skip65
+\epigraphrule=\skip66
 )
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/braket/braket.sty)
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip62
-\enit@outerparindent=\dimen271
+\labelindent=\skip67
+\enit@outerparindent=\dimen280
 \enit@toks=\toks42
-\enit@inbox=\box65
-\enit@count@id=\count296
-\enitdp@description=\count297
+\enit@inbox=\box66
+\enit@count@id=\count308
+\enitdp@description=\count309
 )
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
@@ -800,11 +864,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count298
+\c@section@level=\count310
 )
-\@linkdim=\dimen272
-\Hy@linkcounter=\count299
-\Hy@pagecounter=\count300
+\@linkdim=\dimen281
+\Hy@linkcounter=\count311
+\Hy@pagecounter=\count312
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
@@ -817,7 +881,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/home/whitengine/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count301
+\Hy@SavedSpaceFactor=\count313
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
@@ -831,14 +895,14 @@ Package hyperref Info: Plain pages OFF on input line 4192.
 Package hyperref Info: Backreferencing OFF on input line 4197.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4425.
-\c@Hy@tempcnt=\count302
+\c@Hy@tempcnt=\count314
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen273
+\XeTeXLinkMargin=\dimen282
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -847,9 +911,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count303
-\Field@Width=\dimen274
-\Fld@charsize=\dimen275
+\Fld@menulength=\count315
+\Field@Width=\dimen283
+\Fld@charsize=\dimen284
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -861,9 +925,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count304
-\c@Item=\count305
-\c@Hfootnote=\count306
+\Hy@abspage=\count316
+\c@Item=\count317
+\c@Hfootnote=\count318
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -875,8 +939,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count307
-\c@bookmark@seq@number=\count308
+\Fld@listcount=\count319
+\c@bookmark@seq@number=\count320
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfileche
 ck.sty
@@ -889,13 +953,13 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip63
+\Hy@SectionHShift=\skip68
 )
-Package hyperref Info: Option `unicode' set `false' on input line 49.
-Package hyperref Info: Option `pdftoolbar' set `true' on input line 49.
-Package hyperref Info: Option `pdfmenubar' set `true' on input line 49.
-Package hyperref Info: Option `pdffitwindow' set `false' on input line 49.
-Package hyperref Info: Option `colorlinks' set `true' on input line 49.
+Package hyperref Info: Option `unicode' set `false' on input line 60.
+Package hyperref Info: Option `pdftoolbar' set `true' on input line 60.
+Package hyperref Info: Option `pdfmenubar' set `true' on input line 60.
+Package hyperref Info: Option `pdffitwindow' set `false' on input line 60.
+Package hyperref Info: Option `colorlinks' set `true' on input line 60.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -903,41 +967,135 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/home/whitengine/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count309
-\Gm@cntv=\count310
-\c@Gm@tempcnt=\count311
-\Gm@bindingoffset=\dimen276
-\Gm@wd@mp=\dimen277
-\Gm@odd@mp=\dimen278
-\Gm@even@mp=\dimen279
-\Gm@layoutwidth=\dimen280
-\Gm@layoutheight=\dimen281
-\Gm@layouthoffset=\dimen282
-\Gm@layoutvoffset=\dimen283
+\Gm@cnth=\count321
+\Gm@cntv=\count322
+\c@Gm@tempcnt=\count323
+\Gm@bindingoffset=\dimen285
+\Gm@wd@mp=\dimen286
+\Gm@odd@mp=\dimen287
+\Gm@even@mp=\dimen288
+\Gm@layoutwidth=\dimen289
+\Gm@layoutheight=\dimen290
+\Gm@layouthoffset=\dimen291
+\Gm@layoutvoffset=\dimen292
 \Gm@dimlist=\toks43
 )
-\c@theorem=\count312
-\c@acknowledgement=\count313
-\c@case=\count314
-\c@subcase=\count315
-\c@step=\count316
-\c@approach=\count317
-\c@subsay=\count318
-LaTeX Font Info:    Trying to load font information for T1+fnc on input line 58
-9.
+\c@theorem=\count324
+\c@acknowledgement=\count325
+\c@case=\count326
+\c@subcase=\count327
+\c@step=\count328
+\c@approach=\count329
+\c@subsay=\count330
+
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count331
+\calc@Bcount=\count332
+\calc@Adimen=\dimen293
+\calc@Bdimen=\dimen294
+\calc@Askip=\skip69
+\calc@Bskip=\skip70
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count333
+\calc@Cskip=\skip71
+)
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibrarybabel.code.tex
+File: tikzlibrarybabel.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/spath3/tikzlibraryknots.cod
+e.tex (/home/whitengine/texlive/2023/texmf-dist/tex/latex/spath3/spath3.sty
+Package: spath3 2022/08/24 v2.7 Functions for manipulating PGF soft paths
+\g__spath_output_int=\count334
+\l__spath_tmpa_dim=\dimen295
+\l__spath_tmpb_dim=\dimen296
+\l__spath_tmpa_int=\count335
+\l__spath_tmpb_int=\count336
+\l__spath_move_x_dim=\dimen297
+\l__spath_move_y_dim=\dimen298
+\l__spath_rectx_dim=\dimen299
+\l__spath_recty_dim=\dimen300
+\g__spath_anon_int=\count337
+)
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibraryintersections.code.tex
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryi
+ntersections.code.tex
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryf
+pu.code.tex)
+\pgf@intersect@solutions=\count338
+))
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/spath3/tikzlibraryspath3.co
+de.tex
+\l__tikzspath_tmpa_int=\count339
+)
+\l__knot_tmpa_int=\count340
+\l__knot_strands_int=\count341
+\g__knot_intersections_int=\count342
+\g__knot_filaments_int=\count343
+\l__knot_component_start_int=\count344
+\l__knot_tmpa_dim=\dimen301
+\l__knot_tmpb_dim=\dimen302
+\l__knot_tolerance_dim=\dimen303
+\l__knot_redraw_tolerance_dim=\dimen304
+\l__knot_clip_bg_radius_dim=\dimen305
+\l__knot_clip_draw_radius_dim=\dimen306
+)
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/hobby/tikzlibraryhobby.code
+.tex
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/hobby/pgflibraryhobby.code.
+tex (/home/whitengine/texlive/2023/texmf-dist/tex/latex/hobby/hobby.code.tex
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/hobby/pml3array.sty
+\l_array_base_int=\count345
+\l_array_top_int=\count346
+\l_array_tmp_int=\count347
+\g_array_base_int=\count348
+)
+\l_hobby_npoints_int=\count349
+\l_hobby_draw_int=\count350
+)))
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibrarydecorations.pathreplacing.code.tex
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibrarydecorations.code.tex
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduledeco
+rations.code.tex
+\pgfdecoratedcompleteddistance=\dimen307
+\pgfdecoratedremainingdistance=\dimen308
+\pgfdecoratedinputsegmentcompleteddistance=\dimen309
+\pgfdecoratedinputsegmentremainingdistance=\dimen310
+\pgf@decorate@distancetomove=\dimen311
+\pgf@decorate@repeatstate=\count351
+\pgfdecorationsegmentamplitude=\dimen312
+\pgfdecorationsegmentlength=\dimen313
+)
+\tikz@lib@dec@box=\box67
+)
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations
+/pgflibrarydecorations.pathreplacing.code.tex))
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/libraries/shapes/pgfl
+ibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/whitengine/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/li
+braries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+LaTeX Font Info:    Trying to load font information for T1+fnc on input line 66
+6.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/fouriernc/t1fnc.fd
 File: t1fnc.fd 2005/12/13 scaled font definitions for T1/fnc.
 )
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 11.15991pt on input line 589.
+(Font)              scaled to size 11.15991pt on input line 666.
 
-(/home/whitengine/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.
-def
-File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count319
-\l__pdf_internal_box=\box66
-)
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
 ra-Superficies/out/main.aux
 LaTeX Info: Redefining \. on input line 24.
@@ -945,137 +1103,137 @@ LaTeX Info: Redefining \% on input line 24.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 589.
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 589.
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 589.
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 589.
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 589.
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 589.
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 589.
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 589.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 666.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 666.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 666.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 666.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 666.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 666.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 666.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 666.
 LaTeX Font Info:    Trying to load font information for FML+fncmi on input line
- 589.
+ 666.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
 File: fmlfncmi.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncmi.
 )
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 589.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 666.
 LaTeX Font Info:    Trying to load font information for FMS+fncm on input line 
-589.
+666.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/fouriernc/fmsfncm.fd
 File: fmsfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FMS/fncm.
 )
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 589.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 666.
 LaTeX Font Info:    Trying to load font information for FMX+futm on input line 
-589.
+666.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 589.
-LaTeX Font Info:    ... okay on input line 589.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 589.
-LaTeX Font Info:    ... okay on input line 589.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 666.
+LaTeX Font Info:    ... okay on input line 666.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 666.
+LaTeX Font Info:    ... okay on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 9.29993pt on input line 589.
+(Font)              scaled to size 9.29993pt on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 7.06795pt on input line 589.
+(Font)              scaled to size 7.06795pt on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 5.57996pt on input line 589.
+(Font)              scaled to size 5.57996pt on input line 666.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 589.
+(Font)              scaled to size 9.19998pt on input line 666.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 589.
+(Font)              scaled to size 6.99199pt on input line 666.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 589.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 589
+(Font)              scaled to size 5.51999pt on input line 666.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 666
 .
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 589
+LaTeX Font Info:    Trying to load font information for U+msb on input line 666
 .
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for FML+fncm on input line 
-589.
+666.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/fouriernc/fmlfncm.fd
 File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 589.
+(Font)              scaled to size 9.19998pt on input line 666.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 589.
+(Font)              scaled to size 6.99199pt on input line 666.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 589.
+(Font)              scaled to size 5.51999pt on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 9.29993pt on input line 589.
+(Font)              scaled to size 9.29993pt on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 7.06795pt on input line 589.
+(Font)              scaled to size 7.06795pt on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 5.57996pt on input line 589.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 58
-9.
+(Font)              scaled to size 5.57996pt on input line 666.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 66
+6.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 11.15991pt on input line 589.
+(Font)              scaled to size 11.15991pt on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 8.36993pt on input line 589.
+(Font)              scaled to size 8.36993pt on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 6.50995pt on input line 589.
+(Font)              scaled to size 6.50995pt on input line 666.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 589.
+(Font)              scaled to size 11.03998pt on input line 666.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 589.
+(Font)              scaled to size 8.27998pt on input line 666.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 589.
+(Font)              scaled to size 6.43999pt on input line 666.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 589.
+(Font)              scaled to size 11.03998pt on input line 666.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 589.
+(Font)              scaled to size 8.27998pt on input line 666.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 589.
+(Font)              scaled to size 6.43999pt on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 11.15991pt on input line 589.
+(Font)              scaled to size 11.15991pt on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 8.36993pt on input line 589.
+(Font)              scaled to size 8.36993pt on input line 666.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 6.50995pt on input line 589.
-LaTeX Font Info:    Redeclaring math accent \widehat on input line 589.
-LaTeX Font Info:    Redeclaring math accent \widetilde on input line 589.
-LaTeX Info: Redefining \. on input line 589.
-LaTeX Info: Redefining \% on input line 589.
+(Font)              scaled to size 6.50995pt on input line 666.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 666.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 666.
+LaTeX Info: Redefining \. on input line 666.
+LaTeX Info: Redefining \% on input line 666.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count320
-\scratchdimen=\dimen284
-\scratchbox=\box67
-\nofMPsegments=\count321
-\nofMParguments=\count322
+\scratchcounter=\count352
+\scratchdimen=\dimen314
+\scratchbox=\box68
+\nofMPsegments=\count353
+\nofMParguments=\count354
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count323
-\MPscratchDim=\dimen285
-\MPnumerator=\count324
-\makeMPintoPDFobject=\count325
+\MPscratchCnt=\count355
+\MPscratchDim=\dimen315
+\MPnumerator=\count356
+\makeMPintoPDFobject=\count357
 \everyMPtoPDFconversion=\toks45
 )
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.
@@ -1089,7 +1247,11 @@ g
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 589.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 666.
 
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
 ra-Superficies/out/main.out)
@@ -1136,9 +1298,9 @@ ra-Superficies/out/main.out)
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 9.29993pt on input line 601.
+(Font)              scaled to size 9.29993pt on input line 681.
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 11.15991pt on input line 607.
+(Font)              scaled to size 11.15991pt on input line 687.
 
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
 ra-Superficies/out/main.toc
@@ -1148,8 +1310,8 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 6
-22.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 7
+02.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
@@ -1157,11 +1319,11 @@ File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 }{/home/whitengine/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/w
 hitengine/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 8.36993pt on input line 686.
+(Font)              scaled to size 8.36993pt on input line 766.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 6.50995pt on input line 686.
+(Font)              scaled to size 6.50995pt on input line 766.
 
-Overfull \hbox (6.10158pt too wide) in paragraph at lines 686--686
+Overfull \hbox (6.10158pt too wide) in paragraph at lines 766--766
 []\T1/fnc/m/it/12 Sea $\FML/fncmi/m/it/12 X \FMS/fncm/m/n/12 Å \FML/fncmi/m/it/
 12 C$ \T1/fnc/m/it/12 una cur-va al-ge-brai-ca pro-yec-ti-va irre-du-ci-ble, de
  gÈ-ne-ro $\FML/fncmi/m/it/12 g\T1/fnc/m/n/12 (\FML/fncmi/m/it/12 C\T1/fnc/m/n/
@@ -1170,15 +1332,28 @@ Overfull \hbox (6.10158pt too wide) in paragraph at lines 686--686
  []
 
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 8.36993pt on input line 702.
+(Font)              scaled to size 8.36993pt on input line 782.
 [2]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 703
+LaTeX Font Info:    Trying to load font information for U+euf on input line 783
 .
  (/home/whitengine/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[3]
-Overfull \hbox (7.34557pt too wide) in paragraph at lines 774--775
+(./figura_interseccion.pdf_tex
+<figura_interseccion.pdf, id=59, page=1, 467.49806pt x 249.95587pt>
+File: figura_interseccion.pdf Graphic file (type pdf)
+<use figura_interseccion.pdf, page 1>
+Package pdftex.def Info: figura_interseccion.pdf , page1 used on input line 56.
+
+(pdftex.def)             Requested size: 484.20877pt x 258.90292pt.
+)
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 796.
+See the caption package documentation for explanation.
+
+[3 <./figura_interseccion.pdf>]
+Overfull \hbox (7.34557pt too wide) in paragraph at lines 860--861
 []\T1/fnc/m/n/12 Ahora, el Ìtem (a) y la adi-ti-vi-dad de la ca-rac-te-rÌs-ti-c
 a de Euler-PoincarÈ nos da $\FMS/fncm/m/n/12 hO[]\T1/fnc/m/n/12 (\FML/fncmi/m/i
 t/12 C\T1/fnc/m/n/12 )\FML/fncmi/m/it/12 ; \FMS/fncm/m/n/12 O[]\T1/fnc/m/n/12 (
@@ -1186,14 +1361,14 @@ t/12 C\T1/fnc/m/n/12 )\FML/fncmi/m/it/12 ; \FMS/fncm/m/n/12 O[]\T1/fnc/m/n/12 (
  []
 
 
-Overfull \hbox (4.8217pt too wide) in paragraph at lines 774--775
+Overfull \hbox (3.6337pt too wide) in paragraph at lines 860--861
 \FMS/fncm/m/n/12 h\FML/fncmi/m/it/12 C; C[]\FMS/fncm/m/n/12 i$\T1/fnc/m/n/12 , 
 pues de-sa-rro-llan-do la de-fi-ni-ciÛn del la-do iz-quier-do, se pue-de ver qu
-e es igual a $\FML/fncmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FML/fncmi/m/it/12 O[]\T1/f
-nc/m/n/12 ) \FMS/fncm/m/n/12 Å
+e es igual a $\FML/fncmi/m/it/12 ^^_\T1/fnc/m/n/12 (\FMS/fncm/m/n/12 O[]\T1/fnc
+/m/n/12 ) \FMS/fncm/m/n/12 Å
  []
 
-[4] [5]
+[4] [5] [6]
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
 ra-Superficies/out/main.bbl
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
@@ -1203,7 +1378,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)) [6]
+)) [7]
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semestre/Rieman-Roch-pa
 ra-Superficies/out/main.aux
 LaTeX Info: Redefining \. on input line 24.
@@ -1213,13 +1388,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9039E3C67A5A9ED851A4341DC28D853D;285.
  ) 
 Here is how much of TeX's memory you used:
- 25185 strings out of 476017
- 472720 string characters out of 5786780
- 1871666 words of memory out of 5000000
- 44956 multiletter control sequences out of 15000+600000
+ 31401 strings out of 476017
+ 627569 string characters out of 5786780
+ 1873666 words of memory out of 5000000
+ 51072 multiletter control sequences out of 15000+600000
  595917 words of font info for 169 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 116i,20n,118p,781b,1256s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,20n,384p,781b,1291s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/whitengine/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/euler/e
 ufm10.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/public/fourier/
 fourier-bb.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/public/fou
@@ -1228,17 +1403,16 @@ ic/fourier/fourier-mex.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type
 1/public/fourier/fourier-ml.pfb></home/whitengine/texlive/2023/texmf-dist/fonts
 /type1/public/fourier/fourier-mlit.pfb></home/whitengine/texlive/2023/texmf-dis
 t/fonts/type1/public/fourier/fourier-ms.pfb></home/whitengine/texlive/2023/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/whitengine/texlive
-/2023/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></home/whitengine/tex
-live/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></home/whitengine
-/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></home/whitengine/
-texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></home/whitengine/t
-exlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+f-dist/fonts/type1/public/cm-super/sfss1200.pfb></home/whitengine/texlive/2023/
+texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></home/whitengine/texlive/2
+023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></home/whitengine/texlive/20
+23/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></home/whitengine/texlive/202
+3/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Segundo semes
-tre/Rieman-Roch-para-Superficies/out/main.pdf" (6 pages, 146975 bytes).
+tre/Rieman-Roch-para-Superficies/out/main.pdf" (7 pages, 144783 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 187 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
